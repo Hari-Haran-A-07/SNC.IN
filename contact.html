@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & HQ Location | SRI NEYA CRANE SERVICES</title>
+  <meta name="description" content="Contact Sri Neya Crane Services (SNC). Located at Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul. 24/7 Heavy Crane Booking & Emergency Breakdown Dispatch.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cat: {
+              yellow: '#FFCD11',
+              yellowHover: '#E5B700',
+              black: '#000000',
+              charcoal: '#121212',
+              dark: '#1E1E1E',
+              card: '#252525',
+              border: '#383838'
+            }
+          },
+          fontFamily: {
+            heading: ['Barlow', 'Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-cat-charcoal text-white font-body selection:bg-cat-yellow selection:text-black">
+
+  <!-- TOP BAR -->
+  <div class="cat-top-bar text-xs border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2 text-zinc-300">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="font-bold text-cat-yellow uppercase tracking-wider">HEADQUARTERS DESK: 24/7 OPEN</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+917373399937" class="font-bold text-white hover:text-cat-yellow transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-cat-yellow"></i> +91 7373399937
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="cat-navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="snc-emblem-logo">
+          <div class="snc-triangle-badge"></div>
+          <div class="snc-brand-text">
+            <span class="snc-brand-title">SRI NEYA</span>
+            <span class="snc-brand-subtitle">CRANE SERVICES</span>
+          </div>
+        </a>
+
+        <nav class="hidden xl:flex items-center space-x-1">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="fleet.html" class="nav-link">Fleet Catalog</a>
+          <a href="projects.html" class="nav-link">1500+ Works</a>
+          <a href="tracking.html" class="nav-link">Live Fleet Tracker</a>
+          <a href="emergency.html" class="nav-link text-red-400 hover:text-red-300 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            24/7 Emergency
+          </a>
+          <a href="about.html" class="nav-link">About SNC</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center space-x-3">
+          <a href="emergency.html" class="btn-cat-emergency text-xs py-2.5 px-3.5">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span>SOS Dispatch</span>
+          </a>
+          <button class="open-booking-modal btn-cat-primary text-xs py-2.5 px-4">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Crane</span>
+          </button>
+        </div>
+
+        <div class="xl:hidden flex items-center gap-2">
+          <button id="mobileMenuToggle" class="p-2 text-white hover:text-cat-yellow focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col p-6 overflow-y-auto">
+    <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+      <a href="index.html" class="snc-emblem-logo">
+        <div class="snc-triangle-badge"></div>
+        <div class="snc-brand-text">
+          <span class="snc-brand-title">SRI NEYA</span>
+          <span class="snc-brand-subtitle">CRANE SERVICES</span>
+        </div>
+      </a>
+      <button id="closeMobileDrawer" class="text-white text-3xl hover:text-cat-yellow">&times;</button>
+    </div>
+    <nav class="flex flex-col space-y-4 mt-6 text-lg font-heading font-bold uppercase tracking-wider">
+      <a href="index.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Home</a>
+      <a href="fleet.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Fleet Catalog</a>
+      <a href="projects.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">1,500+ Completed Works</a>
+      <a href="tracking.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Live GPS Fleet Tracker</a>
+      <a href="emergency.html" class="text-red-400 hover:text-red-300 border-b border-zinc-800 pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-truck-medical"></i> 24/7 Emergency
+      </a>
+      <a href="about.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">About SNC</a>
+      <a href="contact.html" class="text-cat-yellow border-b border-zinc-800 pb-2">Contact & HQ Map</a>
+    </nav>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-cat-black py-12 border-b-2 border-cat-yellow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-pretitle">HEADQUARTERS & DISPATCH LOCATIONS</div>
+      <h1 class="text-3xl sm:text-5xl font-black uppercase text-white tracking-tight">
+        CONNECT WITH SRI NEYA CRANE SERVICES
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 max-w-3xl mt-3">
+        Headquartered at Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul. Our team is on standby 24 hours a day, 365 days a year.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO & INQUIRY FORM -->
+  <section class="py-16 bg-cat-charcoal border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: Contact Details Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="cat-card p-6 border-l-4 border-l-cat-yellow">
+            <h3 class="text-lg font-bold uppercase text-white flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-cat-yellow"></i> Head Office & Fleet Yard
+            </h3>
+            <p class="text-xs text-zinc-300 mt-2 leading-relaxed">
+              Kullanampatti Petrol Bunk,<br>
+              Ponnagaram, Natham Byepass,<br>
+              Dindigul, Tamil Nadu – 624003
+            </p>
+            <div class="mt-4 pt-3 border-t border-zinc-800">
+              <a href="https://maps.google.com/?q=Kullanampatti+Petrol+Bunk+Ponnagaram+Natham+Byepass+Dindigul" target="_blank" class="text-xs font-bold text-cat-yellow hover:underline flex items-center gap-1">
+                Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="cat-card p-6 border-l-4 border-l-cat-yellow">
+            <h3 class="text-lg font-bold uppercase text-white flex items-center gap-2">
+              <i class="fa-solid fa-phone text-cat-yellow"></i> 24/7 Telephone Direct Lines
+            </h3>
+            <div class="space-y-2 mt-3 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="text-zinc-400">Dispatch Desk 1:</span>
+                <a href="tel:+917373399937" class="font-extrabold text-white hover:text-cat-yellow">+91 7373399937</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-zinc-400">Dispatch Desk 2:</span>
+                <a href="tel:+918870268899" class="font-extrabold text-white hover:text-cat-yellow">+91 8870268899</a>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-zinc-400">Operations Control:</span>
+                <a href="tel:+919042815504" class="font-extrabold text-white hover:text-cat-yellow">+91 9042815504</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cat-card p-6 border-l-4 border-l-cat-yellow">
+            <h3 class="text-lg font-bold uppercase text-white flex items-center gap-2">
+              <i class="fa-solid fa-clock text-cat-yellow"></i> Working Hours & Service Mode
+            </h3>
+            <p class="text-xs text-zinc-300 mt-2 leading-relaxed">
+              <strong>24 Hours / 7 Days a Week / 365 Days a Year</strong><br>
+              Uninterrupted emergency highway clearance, scheduled plant shutdowns, night lifts, and Sunday operations.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right: Comprehensive Inquiry Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-zinc-900 border-2 border-zinc-700 p-6 sm:p-8 rounded-sm shadow-2xl">
+            <div class="cat-card-accent-line"></div>
+            <div class="border-b border-zinc-700 pb-4 mb-6">
+              <span class="text-xs uppercase font-extrabold text-cat-yellow tracking-wider">DIRECT COMMERCIAL INQUIRY</span>
+              <h3 class="text-2xl font-black uppercase text-white mt-1">Request Crane Quote / Site Feasibility</h3>
+            </div>
+
+            <form id="contactInquiryForm" class="space-y-4" onsubmit="handleContactSubmit(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="cat-label">Your Name / Organization</label>
+                  <input type="text" id="contactName" class="cat-input" required placeholder="e.g. Nagarajan / EPC Contractor">
+                </div>
+                <div>
+                  <label class="cat-label">Phone Number</label>
+                  <input type="tel" id="contactPhone" class="cat-input" required placeholder="+91 9876543210">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="cat-label">Equipment Model Required</label>
+                  <select id="contactCraneType" class="cat-input">
+                    <option>ACE 14XW Pick & Carry (14T)</option>
+                    <option>ACE 16XW Heavy Hydraulic (16T)</option>
+                    <option>50-Ton Telescopic Mobile Crane</option>
+                    <option>80-Ton Rough Terrain Crane</option>
+                    <option>100T - 250T All-Terrain Heavy Crane</option>
+                    <option>Dual-Crane Tandem Rigging</option>
+                    <option>40T Breakdown Tow Truck</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="cat-label">Project Site Location</label>
+                  <input type="text" id="contactLocation" class="cat-input" required placeholder="e.g. Nilakottai SIPCOT / Natham">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="cat-label">Estimated Load Weight (Tons)</label>
+                  <input type="text" id="contactWeight" class="cat-input" placeholder="e.g. 15 Tons">
+                </div>
+                <div>
+                  <label class="cat-label">Deployment Urgency</label>
+                  <select id="contactUrgency" class="cat-input">
+                    <option>Immediate / Within 1 Hour (Emergency)</option>
+                    <option>Same Day (Within 4 Hours)</option>
+                    <option>Scheduled Next Day</option>
+                    <option>Long-Term Industrial Project</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="cat-label">Site Specifics & Rigging Requirements</label>
+                <textarea id="contactMessage" rows="3" class="cat-input" placeholder="Describe lift height, ground conditions, access restrictions..."></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="btn-cat-primary w-full text-center py-3.5 text-base">
+                  <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Submit Inquiry & Connect on WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE EMBEDDED MAP SECTION -->
+  <section class="py-16 bg-cat-dark border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="section-title-wrap text-center max-w-3xl mx-auto mb-8">
+        <div class="section-pretitle justify-center">INTERACTIVE MAP</div>
+        <h2 class="section-title">FIND US IN DINDIGUL</h2>
+        <p class="text-sm text-zinc-400 mt-2">
+          Positioned centrally at Kullanampatti Petrol Bunk, Ponnagaram on the Natham Byepass intersection with direct access to NH-44 and NH-83.
+        </p>
+      </div>
+
+      <div class="border-2 border-cat-yellow/60 rounded-sm overflow-hidden shadow-2xl h-96 relative bg-zinc-950">
+        <iframe 
+          title="Sri Neya Crane Services Location Map"
+          src="https://maps.google.com/maps?q=10.3624,78.0125+(SRI+NEYA+CRANE+SERVICES)&t=m&z=14&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0; filter: contrast(1.1) invert(0.9) hue-rotate(180deg);" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+        
+        <div class="absolute bottom-4 left-4 bg-black/90 p-4 border border-cat-yellow text-xs space-y-1 rounded-sm hidden sm:block">
+          <div class="font-extrabold text-cat-yellow uppercase">SRI NEYA CRANE SERVICES HQ</div>
+          <div class="text-zinc-300">Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul</div>
+          <div class="text-white font-bold">24/7 Hotline: +91 7373399937</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-cat-black border-t-4 border-cat-yellow pt-16 pb-10 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+        <div class="md:col-span-2 space-y-3">
+          <a href="index.html" class="snc-emblem-logo">
+            <div class="snc-triangle-badge"></div>
+            <div class="snc-brand-text">
+              <span class="snc-brand-title">SRI NEYA</span>
+              <span class="snc-brand-subtitle">CRANE SERVICES</span>
+            </div>
+          </a>
+          <p class="text-xs text-zinc-400 max-w-md">Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul, Tamil Nadu.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold uppercase mb-3">Direct Dispatch Lines</h4>
+          <p class="text-white font-bold">+91 7373399937</p>
+          <p class="text-zinc-300">+91 8870268899</p>
+          <p class="text-zinc-300">+91 9042815504</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold uppercase mb-3">Navigation</h4>
+          <div class="space-y-1">
+            <div><a href="index.html" class="hover:text-cat-yellow">Home</a></div>
+            <div><a href="fleet.html" class="hover:text-cat-yellow">Fleet Catalog</a></div>
+            <div><a href="projects.html" class="hover:text-cat-yellow">1500+ Works</a></div>
+            <div><a href="tracking.html" class="hover:text-cat-yellow">Live Fleet Tracker</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-zinc-500">
+        &copy; 2026 SRI NEYA CRANE SERVICES. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value;
+      const phone = document.getElementById('contactPhone').value;
+      const craneType = document.getElementById('contactCraneType').value;
+      const location = document.getElementById('contactLocation').value;
+      const weight = document.getElementById('contactWeight').value;
+      const urgency = document.getElementById('contactUrgency').value;
+      const msg = document.getElementById('contactMessage').value;
+
+      const url = `https://wa.me/917373399937?text=CRANE%20INQUIRY%20FROM%20WEBSITE:%0AName:%20${encodeURIComponent(name)}%0APhone:%20${encodeURIComponent(phone)}%0AEquipment:%20${encodeURIComponent(craneType)}%0ALocation:%20${encodeURIComponent(location)}%0AWeight:%20${encodeURIComponent(weight)}%0AUrgency:%20${encodeURIComponent(urgency)}%0ADetails:%20${encodeURIComponent(msg)}`;
+
+      window.open(url, '_blank');
+    }
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRI NEYA CRANE SERVICES | 24/7 Heavy Crane Rental & Industrial Lifting Solutions</title>
+  <meta name="description" content="Sri Neya Crane Services (SNC) - Premier heavy mobile crane rental, ACE hydraulic cranes (10T to 250T), 24/7 emergency highway breakdown recovery, factory machinery shifting in Dindigul, Tamil Nadu.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cat: {
+              yellow: '#FFCD11',
+              yellowHover: '#E5B700',
+              black: '#000000',
+              charcoal: '#121212',
+              dark: '#1E1E1E',
+              card: '#252525',
+              border: '#383838'
+            }
+          },
+          fontFamily: {
+            heading: ['Barlow', 'Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Caterpillar Design System Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-cat-charcoal text-white font-body selection:bg-cat-yellow selection:text-black">
+
+  <!-- TOP 24/7 EMERGENCY & LOCATION BAR (Caterpillar Style) -->
+  <div class="cat-top-bar text-xs border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-6 flex-wrap">
+        <div class="flex items-center gap-2 text-zinc-300">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="font-bold text-cat-yellow uppercase tracking-wider">24/7 DISPATCH ACTIVE</span>
+          <span class="text-zinc-500 hidden sm:inline">|</span>
+          <span class="hidden sm:inline text-zinc-400">Rapid Response &lt; 30 Mins</span>
+        </div>
+        <div class="hidden md:flex items-center gap-2 text-zinc-300">
+          <i class="fa-solid fa-location-dot text-cat-yellow"></i>
+          <span>Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-zinc-400 hidden lg:inline">Direct 24/7 Hotline:</span>
+        <a href="tel:+917373399937" class="font-bold text-white hover:text-cat-yellow transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-cat-yellow"></i> +91 7373399937
+        </a>
+        <a href="tel:+918870268899" class="font-bold text-zinc-300 hover:text-cat-yellow transition hidden sm:inline">
+          +91 8870268899
+        </a>
+        <a href="tel:+919042815504" class="font-bold text-zinc-300 hover:text-cat-yellow transition hidden sm:inline">
+          +91 9042815504
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header class="cat-navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Caterpillar-style Triangular SNC Emblem Logo -->
+        <a href="index.html" class="snc-emblem-logo">
+          <div class="snc-triangle-badge"></div>
+          <div class="snc-brand-text">
+            <span class="snc-brand-title">SRI NEYA</span>
+            <span class="snc-brand-subtitle">CRANE SERVICES</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center space-x-1">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="fleet.html" class="nav-link">Fleet Catalog</a>
+          <a href="projects.html" class="nav-link">1500+ Works</a>
+          <a href="tracking.html" class="nav-link">Live Fleet Tracker</a>
+          <a href="emergency.html" class="nav-link text-red-400 hover:text-red-300 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            24/7 Emergency
+          </a>
+          <a href="about.html" class="nav-link">About SNC</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <a href="emergency.html" class="btn-cat-emergency text-xs py-2.5 px-3.5">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span>SOS Dispatch</span>
+          </a>
+          <button class="open-booking-modal btn-cat-primary text-xs py-2.5 px-4">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Crane</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="xl:hidden flex items-center gap-2">
+          <a href="tel:+917373399937" class="bg-cat-yellow text-black p-2.5 rounded-sm font-bold text-sm sm:hidden">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <button id="mobileMenuToggle" class="p-2 text-white hover:text-cat-yellow focus:outline-none" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col p-6 overflow-y-auto">
+    <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+      <a href="index.html" class="snc-emblem-logo">
+        <div class="snc-triangle-badge"></div>
+        <div class="snc-brand-text">
+          <span class="snc-brand-title">SRI NEYA</span>
+          <span class="snc-brand-subtitle">CRANE SERVICES</span>
+        </div>
+      </a>
+      <button id="closeMobileDrawer" class="text-white text-3xl hover:text-cat-yellow">&times;</button>
+    </div>
+    <nav class="flex flex-col space-y-4 mt-6 text-lg font-heading font-bold uppercase tracking-wider">
+      <a href="index.html" class="text-cat-yellow border-b border-zinc-800 pb-2">Home</a>
+      <a href="fleet.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Fleet Catalog (10T - 250T)</a>
+      <a href="projects.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">1,500+ Completed Works</a>
+      <a href="tracking.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Live GPS Fleet Tracker</a>
+      <a href="emergency.html" class="text-red-400 hover:text-red-300 border-b border-zinc-800 pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-truck-medical"></i> 24/7 Emergency Breakdown
+      </a>
+      <a href="about.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">About Sri Neya</a>
+      <a href="contact.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Contact & HQ Map</a>
+    </nav>
+    <div class="mt-8 space-y-3">
+      <button class="open-booking-modal btn-cat-primary w-full text-center">
+        <i class="fa-solid fa-calendar-check"></i> Book a Crane Now
+      </button>
+      <a href="tel:+917373399937" class="btn-cat-secondary w-full text-center">
+        <i class="fa-solid fa-phone"></i> Call 24/7 Dispatch Desk
+      </a>
+    </div>
+    <div class="mt-8 pt-6 border-t border-zinc-800 text-xs text-zinc-400 space-y-2">
+      <p><i class="fa-solid fa-location-dot text-cat-yellow mr-2"></i> Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul</p>
+      <p><i class="fa-solid fa-clock text-cat-yellow mr-2"></i> 24 Hours / 365 Days Uninterrupted Operations</p>
+    </div>
+  </div>
+
+  <!-- HERO SECTION (Caterpillar Industrial UI Banner) -->
+  <section class="relative bg-cat-black min-h-[620px] flex items-center border-b-4 border-cat-yellow overflow-hidden">
+    <!-- Industrial Diagonal Pattern Overlay -->
+    <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#FFCD11_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-cat-yellow/10 via-transparent to-transparent pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Industrial Headline & CTA -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 bg-zinc-900 border border-cat-yellow/40 px-3.5 py-1.5 rounded-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-cat-yellow animate-ping"></span>
+            <span class="text-xs font-heading font-extrabold uppercase tracking-widest text-cat-yellow">TAMIL NADU'S TRUSTED HEAVY LIFTING FLEET</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-white tracking-tight leading-none">
+            HEAVY LIFTING POWER. <br>
+            <span class="text-cat-yellow">UNCOMPROMISING SAFETY 24/7.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-zinc-300 max-w-2xl leading-relaxed">
+            Enterprise-grade mobile hydraulic crane rentals, precision plant machinery erection, high-mast lighting rigging, telecommunication towers, and 24-hour rapid highway breakdown recovery across Dindigul, Madurai, Karur & South India.
+          </p>
+
+          <!-- Fast Spec Badges -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <div class="spec-pill">
+              <i class="fa-solid fa-shield-halved text-cat-yellow"></i>
+              <span>100% Certified Riggers</span>
+            </div>
+            <div class="spec-pill">
+              <i class="fa-solid fa-weight-hanging text-cat-yellow"></i>
+              <span>Capacity: <strong>10T to 250T</strong></span>
+            </div>
+            <div class="spec-pill">
+              <i class="fa-solid fa-stopwatch text-cat-yellow"></i>
+              <span>Emergency Response: <strong>&lt; 30 Mins</strong></span>
+            </div>
+            <div class="spec-pill">
+              <i class="fa-solid fa-trophy text-cat-yellow"></i>
+              <span><strong>1,500+</strong> Safe Lifts Done</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="pt-4 flex flex-wrap gap-4">
+            <button class="open-booking-modal btn-cat-primary text-base py-3.5 px-6">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Request Instant Quote</span>
+            </button>
+            <a href="tel:+917373399937" class="btn-cat-secondary text-base py-3.5 px-6">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 7373399937</span>
+            </a>
+            <a href="tracking.html" class="btn-cat-dark text-base py-3.5 px-5">
+              <i class="fa-solid fa-satellite-dish text-cat-yellow"></i>
+              <span>Track Live Fleet</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Quick Capacity & Booking Filter Card (Caterpillar Job Search Style) -->
+        <div class="lg:col-span-5">
+          <div class="bg-zinc-900/95 border-2 border-cat-yellow p-6 sm:p-8 rounded-sm shadow-2xl relative">
+            <div class="cat-card-accent-line"></div>
+            <div class="flex items-center justify-between border-b border-zinc-700 pb-4 mb-5">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-cat-yellow">RAPID CRANE DISPATCH</span>
+                <h3 class="text-xl font-black uppercase text-white mt-0.5">Quick Booking Engine</h3>
+              </div>
+              <i class="fa-solid fa-truck-ramp-box text-2xl text-cat-yellow"></i>
+            </div>
+
+            <form id="heroQuickBookForm" class="space-y-4" onsubmit="event.preventDefault(); document.querySelector('.open-booking-modal').click();">
+              <div>
+                <label class="cat-label">Required Crane Capacity</label>
+                <select class="cat-input">
+                  <option>ACE 14XW Mobile Crane (14 Ton)</option>
+                  <option>ACE 16XW Heavy Hydraulic (16 Ton)</option>
+                  <option>Hydraulic Telescopic Mobile Crane (40T - 50T)</option>
+                  <option>Rough Terrain Heavy Crane (80T)</option>
+                  <option>All-Terrain Heavy Crane (100T - 150T)</option>
+                  <option>Heavy Breakdown Recovery Tow Truck (40T)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="cat-label">Lifting Job Category</label>
+                <select class="cat-input">
+                  <option>Industrial Plant Machinery Shifting</option>
+                  <option>High-Mast Lighting & Pole Erection</option>
+                  <option>TNEB Power Substation Transformer Rigging</option>
+                  <option>Telecom Rooftop Tower Installation</option>
+                  <option>Highway Breakdown & Overturned Rescue</option>
+                  <option>PEB Structural Steel Truss Erection</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="cat-label">Job Site Location / District</label>
+                <input type="text" placeholder="e.g. Dindigul, Nilakottai, Madurai, Natham..." class="cat-input" required value="Dindigul Byepass Region">
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="btn-cat-primary w-full text-center py-3.5 text-base">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Find Available Cranes & Get Rate</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="mt-4 pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+              <span><i class="fa-solid fa-headset text-cat-yellow mr-1"></i> 24/7 Support Desk</span>
+              <a href="emergency.html" class="text-red-400 hover:text-red-300 font-bold uppercase flex items-center gap-1">
+                <i class="fa-solid fa-bolt"></i> Emergency SOS
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE PHOTO SLIDER SHOWCASE (User's Real ACE Crane Job Photos) -->
+  <section class="py-16 bg-cat-charcoal border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div class="section-title-wrap mb-0">
+          <div class="section-pretitle">ON-SITE OPERATIONS GALLERY</div>
+          <h2 class="section-title">REAL-WORLD HEAVY LIFTS IN ACTION</h2>
+          <p class="text-sm text-zinc-400 max-w-2xl mt-2">
+            Explore authentic on-site photos of Sri Neya Crane Services fleet executing complex rigging, high-mast lighting erection, factory machinery shifts, and power transmission utility projects.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="projects.html" class="btn-cat-dark text-xs py-2.5 px-4">
+            <i class="fa-solid fa-layer-group"></i> View All 1,500+ Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Slider Wrapper -->
+      <div class="snc-carousel-container shadow-2xl">
+        <div class="snc-carousel-track" id="sncCarouselTrack">
+          
+          <!-- Slide 1: High Mast Erection -->
+          <div class="snc-carousel-slide" data-antigravity-asset="high-mast-erection">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-high-mast-erection.jpg" alt="High Mast Floodlight Tower Erection with ACE Crane" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1542</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">30-Meter High-Mast Light Tower Erection</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    Precision lifting and vertical foundation mounting of multi-sided high-mast floodlight ring assembly using our heavy ACE telescopic hydraulic crane and certified rigging crew.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1542')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Power Transformer / Line Pole Erection -->
+          <div class="snc-carousel-slide" data-antigravity-asset="power-transformer-lift">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-power-transformer-lift.jpg" alt="TNEB Power Line Pole and Substation Rigging" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1540</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Power Substation Transformer & Utility Rigging</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    Rapid synchronized utility crane operations for high-voltage transformer installation and concrete electricity transmission pole erection.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1540')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Dual Crane Tandem Lift -->
+          <div class="snc-carousel-slide" data-antigravity-asset="dual-crane-tandem-lift">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual ACE Crane Heavy Machinery Tandem Lift" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1541</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Synchronized Dual ACE Crane Heavy Tandem Lift</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    Two ACE heavy hydraulic cranes working in perfect tandem synchronicity to lift, position, and install heavy industrial machinery modules at manufacturing plant.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1541')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Rooftop Telecom Tower Lift -->
+          <div class="snc-carousel-slide" data-antigravity-asset="telecom-tower-lift">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-telecom-tower-lift.jpg" alt="Multi-Storey Rooftop Telecom Tower Heavy Lift" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1539</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Building Rooftop Telecommunication Tower Rigging</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    High-reach precision telescopic boom operation hoisting heavy steel lattice telecommunication towers to multi-storey rooftop in Dindigul commercial zone.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1539')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Next & Prev Controls -->
+        <button id="sncCarouselPrev" class="snc-carousel-nav-btn snc-carousel-prev" aria-label="Previous Slide">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <button id="sncCarouselNext" class="snc-carousel-nav-btn snc-carousel-next" aria-label="Next Slide">
+          <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Thumbnail Selector Strip -->
+      <div class="snc-thumbnail-strip">
+        <div class="snc-thumbnail active" data-slide-index="0">
+          <img src="assets/images/project-high-mast-erection.jpg" alt="High Mast Erection" />
+        </div>
+        <div class="snc-thumbnail" data-slide-index="1">
+          <img src="assets/images/project-power-transformer-lift.jpg" alt="Power Transformer Lift" />
+        </div>
+        <div class="snc-thumbnail" data-slide-index="2">
+          <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual Crane Tandem Lift" />
+        </div>
+        <div class="snc-thumbnail" data-slide-index="3">
+          <img src="assets/images/project-telecom-tower-lift.jpg" alt="Telecom Tower Lift" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 1500+ WORKS COMPLETED INTERACTIVE DASHBOARD SECTION -->
+  <section class="py-16 bg-cat-dark border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Key Statistics Metric Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div class="dashboard-stat-box">
+          <div class="dashboard-stat-number counter-animate" data-target="1542" data-suffix="+">1,542+</div>
+          <div class="dashboard-stat-label">Successful Heavy Lifts</div>
+          <p class="text-xs text-zinc-400 mt-1">Across Tamil Nadu & South India</p>
+        </div>
+        <div class="dashboard-stat-box">
+          <div class="dashboard-stat-number counter-animate" data-target="100" data-suffix="%">100%</div>
+          <div class="dashboard-stat-label">Zero Incident Safety Record</div>
+          <p class="text-xs text-zinc-400 mt-1">Strict Rigging & Lifting SOPs</p>
+        </div>
+        <div class="dashboard-stat-box">
+          <div class="dashboard-stat-number counter-animate" data-target="250" data-suffix="T">250T</div>
+          <div class="dashboard-stat-label">Max Heavy Lift Capacity</div>
+          <p class="text-xs text-zinc-400 mt-1">Hydraulic, All-Terrain & Tandem</p>
+        </div>
+        <div class="dashboard-stat-box">
+          <div class="dashboard-stat-number counter-animate" data-target="24" data-suffix="/7">24/7</div>
+          <div class="dashboard-stat-label">Highway & Plant Response</div>
+          <p class="text-xs text-zinc-400 mt-1">&lt; 30 Mins Average Dispatch</p>
+        </div>
+      </div>
+
+      <!-- Dashboard Header & Sector Filters -->
+      <div class="section-title-wrap">
+        <div class="section-pretitle">OPERATIONAL TRACK RECORD</div>
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div>
+            <h2 class="section-title">1,500+ COMPLETED WORKS LOG</h2>
+            <p class="text-sm text-zinc-400 mt-1">
+              Search and filter our verified commercial lifting database by industry, equipment, and location.
+            </p>
+          </div>
+          <div id="worksCountBadge" class="self-start lg:self-auto bg-black text-cat-yellow font-mono text-xs font-bold px-3 py-1.5 border border-cat-yellow/40">
+            Loading 1,542+ Records...
+          </div>
+        </div>
+      </div>
+
+      <!-- Sector Filter Toolbar & Search Bar -->
+      <div class="bg-zinc-950 p-4 border border-zinc-800 rounded-sm mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <!-- Sector Buttons -->
+        <div class="flex items-center gap-2 flex-wrap w-full md:w-auto">
+          <button class="work-filter-btn active" data-sector="all">All Sectors</button>
+          <button class="work-filter-btn" data-sector="industrial">Factory Machinery</button>
+          <button class="work-filter-btn" data-sector="lighting">High-Mast & Poles</button>
+          <button class="work-filter-btn" data-sector="power">Power & Utilities</button>
+          <button class="work-filter-btn" data-sector="telecom">Telecom Towers</button>
+          <button class="work-filter-btn" data-sector="rescue">Highway Rescue</button>
+          <button class="work-filter-btn" data-sector="infrastructure">Infrastructure</button>
+        </div>
+
+        <!-- Live Search Input -->
+        <div class="w-full md:w-72 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 text-sm"></i>
+          <input type="text" id="workSearchInput" placeholder="Search project, location, client..." class="cat-input pl-9 text-xs py-2.5">
+        </div>
+      </div>
+
+      <!-- Dynamic Projects Grid Container (Populated by main.js) -->
+      <div id="worksDashboardGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- JavaScript will populate work cards -->
+      </div>
+
+      <!-- Bottom Dashboard Action Bar -->
+      <div class="mt-12 p-6 bg-zinc-950 border-2 border-cat-yellow/40 rounded-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div>
+          <h4 class="text-lg font-black uppercase text-white">Need a specialized engineered lift plan for your site?</h4>
+          <p class="text-xs text-zinc-400">Our certified rigging engineers provide free on-site load feasibility assessment across Tamil Nadu.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="projects.html" class="btn-cat-primary text-xs py-2.5 px-5">
+            <i class="fa-solid fa-list-check"></i> Explore Full Works Hub
+          </a>
+          <a href="https://wa.me/917373399937?text=Hello%20SNC,%20I%20would%20like%20to%20request%20an%20on-site%20crane%20feasibility%20survey." target="_blank" class="btn-cat-secondary text-xs py-2.5 px-4">
+            <i class="fa-brands fa-whatsapp text-green-400"></i> WhatsApp Survey
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CORE FLEET EQUIPMENT CATALOG SECTION -->
+  <section class="py-16 bg-cat-charcoal border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="section-title-wrap text-center max-w-3xl mx-auto">
+        <div class="section-pretitle justify-center">HEAVY EQUIPMENT LINEUP</div>
+        <h2 class="section-title">ENGINEERED FOR EXTREME LOADS</h2>
+        <p class="text-sm text-zinc-400 mt-2">
+          Precision hydraulic mobile cranes, rough terrain units, and heavy commercial recovery wreckers maintained to rigorous OEM safety standards.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        
+        <!-- Fleet Item 1: ACE 14XW Mobile Crane -->
+        <div class="cat-card group flex flex-col justify-between">
+          <div class="cat-card-accent-line"></div>
+          <div>
+            <div class="relative h-52 bg-zinc-950 overflow-hidden">
+              <span class="cat-card-header-tag">POPULAR PICK & CARRY</span>
+              <img src="assets/images/project-telecom-tower-lift.jpg" alt="ACE 14XW Mobile Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">MODEL: ACE 14XW</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold uppercase text-white group-hover:text-cat-yellow transition">ACE 14XW Hydraulic Mobile Crane</h3>
+              <p class="text-xs text-zinc-400 mt-2">
+                Heavy-duty pick & carry crane engineered for plant machinery shifting, construction yard loading, and structural truss positioning.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Lift Capacity</span>
+                  <span class="font-extrabold text-cat-yellow text-sm">14.0 Metric Tons</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Boom Length</span>
+                  <span class="font-extrabold text-white text-sm">13.5 Meters</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Steering Angle</span>
+                  <span class="font-extrabold text-white text-sm">40&deg; Articulation</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Deployment</span>
+                  <span class="font-extrabold text-green-400 text-sm">Instant Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="open-booking-modal btn-cat-primary w-full text-center text-xs py-3">
+              <i class="fa-solid fa-calendar-check mr-1"></i> Book ACE 14XW
+            </button>
+          </div>
+        </div>
+
+        <!-- Fleet Item 2: ACE 16XW Heavy Hydraulic Crane -->
+        <div class="cat-card group flex flex-col justify-between border-cat-yellow/60">
+          <div class="cat-card-accent-line"></div>
+          <div>
+            <div class="relative h-52 bg-zinc-950 overflow-hidden">
+              <span class="cat-card-header-tag bg-cat-yellow text-black">HIGH DEMAND &bull; 16 TON</span>
+              <img src="assets/images/project-high-mast-erection.jpg" alt="ACE 16XW Heavy Hydraulic Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">MODEL: ACE 16XW HEAVY</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold uppercase text-white group-hover:text-cat-yellow transition">ACE 16XW Heavy Hydraulic Crane</h3>
+              <p class="text-xs text-zinc-400 mt-2">
+                Heavy lifting workhorse for high mast towers, electrical substations, heavy bridge girder assembly, and tandem factory equipment relocation.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Lift Capacity</span>
+                  <span class="font-extrabold text-cat-yellow text-sm">16.0 Metric Tons</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Boom Extension</span>
+                  <span class="font-extrabold text-white text-sm">15.8 Meters 4-Part</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Transmission</span>
+                  <span class="font-extrabold text-white text-sm">Heavy Duty Synchro</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Rigging Crew</span>
+                  <span class="font-extrabold text-green-400 text-sm">Certified Crew Incl.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="open-booking-modal btn-cat-primary w-full text-center text-xs py-3">
+              <i class="fa-solid fa-calendar-check mr-1"></i> Book ACE 16XW
+            </button>
+          </div>
+        </div>
+
+        <!-- Fleet Item 3: 50-Ton Telescopic Hydraulic Mobile Crane -->
+        <div class="cat-card group flex flex-col justify-between">
+          <div class="cat-card-accent-line"></div>
+          <div>
+            <div class="relative h-52 bg-zinc-950 overflow-hidden">
+              <span class="cat-card-header-tag">HEAVY INDUSTRIAL</span>
+              <img src="assets/images/project-power-transformer-lift.jpg" alt="50-Ton Telescopic Mobile Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">SERIES: 50T HYDRAULIC</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold uppercase text-white group-hover:text-cat-yellow transition">50-Ton Telescopic Mobile Crane</h3>
+              <p class="text-xs text-zinc-400 mt-2">
+                Extended reach telescopic crane for multi-storey building construction, bridge beam placement, and heavy transformer erections.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Max Capacity</span>
+                  <span class="font-extrabold text-cat-yellow text-sm">50.0 Metric Tons</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Max Tip Height</span>
+                  <span class="font-extrabold text-white text-sm">42.0 Meters</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Outriggers</span>
+                  <span class="font-extrabold text-white text-sm">Full H-Type Auto</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Turnaround</span>
+                  <span class="font-extrabold text-green-400 text-sm">24/7 Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="open-booking-modal btn-cat-primary w-full text-center text-xs py-3">
+              <i class="fa-solid fa-calendar-check mr-1"></i> Book 50T Mobile Crane
+            </button>
+          </div>
+        </div>
+
+        <!-- Fleet Item 4: 80T - 150T All-Terrain Heavy Crane -->
+        <div class="cat-card group flex flex-col justify-between">
+          <div class="cat-card-accent-line"></div>
+          <div>
+            <div class="relative h-52 bg-zinc-950 overflow-hidden">
+              <span class="cat-card-header-tag">MEGA LIFT CAPACITY</span>
+              <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="100T to 150T All-Terrain Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">ALL-TERRAIN: 80T - 150T</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold uppercase text-white group-hover:text-cat-yellow transition">80T - 150T All-Terrain Heavy Crane</h3>
+              <p class="text-xs text-zinc-400 mt-2">
+                Multi-axle all-wheel steer mobile crane for wind power components, cement plant overhaul, and massive infrastructural girders.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Tonnage Range</span>
+                  <span class="font-extrabold text-cat-yellow text-sm">80T - 150 Metric Tons</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Boom + Jib</span>
+                  <span class="font-extrabold text-white text-sm">Up to 68 Meters</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Drive</span>
+                  <span class="font-extrabold text-white text-sm">8x6x8 All-Terrain</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Lift Planning</span>
+                  <span class="font-extrabold text-green-400 text-sm">CAD Simulation Incl.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="open-booking-modal btn-cat-primary w-full text-center text-xs py-3">
+              <i class="fa-solid fa-calendar-check mr-1"></i> Request Heavy Quote
+            </button>
+          </div>
+        </div>
+
+        <!-- Fleet Item 5: Dual Crane Synchronized Tandem Lifts -->
+        <div class="cat-card group flex flex-col justify-between">
+          <div class="cat-card-accent-line"></div>
+          <div>
+            <div class="relative h-52 bg-zinc-950 overflow-hidden">
+              <span class="cat-card-header-tag">SPECIALIZED RIGGING</span>
+              <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual Crane Synchronized Tandem Lift" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">TANDEM OPERATION</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold uppercase text-white group-hover:text-cat-yellow transition">Synchronized Dual Crane Tandem Rigging</h3>
+              <p class="text-xs text-zinc-400 mt-2">
+                Engineered tandem twin-crane lifting for oversized machinery, elongated vessels, heavy stamping presses, and factory installations.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Combined Capacity</span>
+                  <span class="font-extrabold text-cat-yellow text-sm">Up to 250 Metric Tons</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Safety Protocol</span>
+                  <span class="font-extrabold text-white text-sm">Dual Load-Chart Matrix</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Site Engineer</span>
+                  <span class="font-extrabold text-white text-sm">On-Site Supervisor</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Turnaround</span>
+                  <span class="font-extrabold text-green-400 text-sm">Zero Downtime</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="open-booking-modal btn-cat-primary w-full text-center text-xs py-3">
+              <i class="fa-solid fa-calendar-check mr-1"></i> Book Tandem Lift
+            </button>
+          </div>
+        </div>
+
+        <!-- Fleet Item 6: 40T Commercial Breakdown & Towing Recovery -->
+        <div class="cat-card group flex flex-col justify-between border-red-900/50">
+          <div class="cat-card-accent-line bg-red-600"></div>
+          <div>
+            <div class="relative h-52 bg-zinc-950 overflow-hidden">
+              <span class="cat-card-header-tag bg-red-600 text-white">24/7 HIGHWAY RESCUE</span>
+              <img src="assets/images/project-power-transformer-lift.jpg" alt="Heavy Breakdown Recovery & Towing Unit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-red-400">RESCUE UNIT: 40T TOWING</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold uppercase text-white group-hover:text-red-400 transition">40T Heavy Breakdown & Highway Recovery</h3>
+              <p class="text-xs text-zinc-400 mt-2">
+                Heavy winching and upright recovery for overturned multi-axle trailers, loaded commercial trucks, and accident clearance on NH-44, NH-83 & NH-383.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Recovery Capacity</span>
+                  <span class="font-extrabold text-red-400 text-sm">40.0 Metric Tons</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Winch Strength</span>
+                  <span class="font-extrabold text-white text-sm">Twin 25T Hydraulic</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Dispatch Speed</span>
+                  <span class="font-extrabold text-white text-sm">&lt; 15 Mins Rapid</span>
+                </div>
+                <div class="bg-zinc-900 p-2.5 border border-zinc-800">
+                  <span class="text-zinc-500 block text-[10px] uppercase">Direct Line</span>
+                  <span class="font-extrabold text-red-400 text-sm">+91 7373399937</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="emergency.html" class="btn-cat-emergency w-full text-center text-xs py-3">
+              <i class="fa-solid fa-truck-medical mr-1"></i> Call Emergency Recovery
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="fleet.html" class="btn-cat-secondary text-sm py-3 px-8">
+          <i class="fa-solid fa-truck-ramp-box mr-2"></i> View Complete Technical Fleet Specifications & Load Charts
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LOAD CAPACITY & CRANE ESTIMATOR TOOL -->
+  <section class="py-16 bg-cat-dark border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-5">
+          <div class="section-pretitle">PRECISION LIFT ESTIMATION</div>
+          <h2 class="text-3xl sm:text-4xl font-black uppercase text-white leading-tight">
+            CALCULATE CRANE REQUIREMENTS IN SECONDS
+          </h2>
+          <p class="text-sm text-zinc-300 leading-relaxed">
+            Enter your target load parameters below to instantly calculate the recommended crane tonnage, boom reach, and safety clearance.
+          </p>
+          
+          <div class="space-y-3 pt-2 text-xs text-zinc-300">
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-cat-yellow text-black flex items-center justify-center font-bold">1</div>
+              <span>Input cargo weight, required working radius & boom height.</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-cat-yellow text-black flex items-center justify-center font-bold">2</div>
+              <span>Engineered algorithm computes optimal crane class with 25% safety margin.</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-cat-yellow text-black flex items-center justify-center font-bold">3</div>
+              <span>Connect directly with our 24/7 dispatch desk for locked pricing and booking.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-zinc-900 border-2 border-cat-dark p-6 sm:p-8 rounded-sm shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+              <div>
+                <label class="cat-label">Load Weight (Tons)</label>
+                <input type="number" id="calcWeight" placeholder="e.g. 12" class="cat-input" min="1" max="250" value="10">
+              </div>
+              <div>
+                <label class="cat-label">Working Radius (Meters)</label>
+                <input type="number" id="calcRadius" placeholder="e.g. 8" class="cat-input" min="1" max="80" value="6">
+              </div>
+              <div>
+                <label class="cat-label">Lift Height (Meters)</label>
+                <input type="number" id="calcHeight" placeholder="e.g. 15" class="cat-input" min="1" max="100" value="12">
+              </div>
+            </div>
+
+            <button id="calcSubmitBtn" class="btn-cat-primary w-full text-center py-3.5 text-sm">
+              <i class="fa-solid fa-calculator mr-2"></i> Calculate Crane Model & Safety Index
+            </button>
+
+            <!-- Dynamic Result Card (Populated by JS) -->
+            <div id="calcResult" class="mt-5 hidden"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY SRI NEYA CRANE SERVICES (Caterpillar Industrial Value Pillars) -->
+  <section class="py-16 bg-cat-charcoal border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="section-title-wrap text-center max-w-3xl mx-auto mb-12">
+        <div class="section-pretitle justify-center">THE SNC ADVANTAGE</div>
+        <h2 class="section-title">WHY INDUSTRY LEADERS TRUST US</h2>
+        <p class="text-sm text-zinc-400 mt-2">
+          Combining heavy lifting horsepower with stringent safety standards, factory-trained riggers, and uninterrupted 24/7 emergency availability.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="cat-card p-6">
+          <div class="w-12 h-12 bg-cat-yellow text-black flex items-center justify-center font-black text-xl rounded-sm mb-4">
+            <i class="fa-solid fa-hard-hat"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase text-white">100% Certified Riggers & Operators</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Every crane operator and rigger holds valid heavy equipment licensing, height safety certifications, and regular third-party fitness training.
+          </p>
+        </div>
+
+        <div class="cat-card p-6 border-cat-yellow/50">
+          <div class="w-12 h-12 bg-cat-yellow text-black flex items-center justify-center font-black text-xl rounded-sm mb-4">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase text-white">24/7 Rapid Response &lt; 30 Mins</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Strategically stationed at Natham Byepass, Dindigul junction for instantaneous highway breakdown rescue and emergency industrial support.
+          </p>
+        </div>
+
+        <div class="cat-card p-6">
+          <div class="w-12 h-12 bg-cat-yellow text-black flex items-center justify-center font-black text-xl rounded-sm mb-4">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="text-lg font-bold uppercase text-white">Preventative OEM Fleet Maintenance</h3>
+          <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+            Zero-downtime reliability guaranteed through rigorous scheduled hydraulic pressure checks, wire rope ultrasound testing, and OEM parts.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EMERGENCY HIGHWAY & PLANT BREAKDOWN BANNER -->
+  <section class="py-12 bg-gradient-to-r from-red-950 via-black to-zinc-950 border-y-2 border-red-600 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-16 h-16 bg-red-600 text-white flex items-center justify-center rounded-sm text-3xl shrink-0 animate-bounce">
+          <i class="fa-solid fa-truck-medical"></i>
+        </div>
+        <div>
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-red-400">HIGHWAY & INDUSTRIAL EMERGENCY</span>
+          <h3 class="text-2xl sm:text-3xl font-black uppercase text-white">IMMEDIATE BREAKDOWN OR OVERTURNED RESCUE?</h3>
+          <p class="text-xs sm:text-sm text-zinc-300 mt-1">Direct priority access to heavy wreckers, mobile cranes, and certified rescue technicians.</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+        <a href="tel:+917373399937" class="btn-cat-emergency text-sm py-3 px-6 text-center">
+          <i class="fa-solid fa-phone-volume mr-2"></i> +91 7373399937
+        </a>
+        <a href="tel:+8870268899" class="btn-cat-secondary text-sm py-3 px-5 text-center">
+          <i class="fa-solid fa-phone mr-2"></i> +91 8870268899
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER (Caterpillar High-Contrast Industrial Layout) -->
+  <footer class="bg-cat-black border-t-4 border-cat-yellow pt-16 pb-10 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-zinc-800">
+        
+        <!-- Col 1: Brand & Emblem -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="snc-emblem-logo">
+            <div class="snc-triangle-badge"></div>
+            <div class="snc-brand-text">
+              <span class="snc-brand-title">SRI NEYA</span>
+              <span class="snc-brand-subtitle">CRANE SERVICES</span>
+            </div>
+          </a>
+          <p class="text-zinc-400 text-xs leading-relaxed max-w-sm">
+            Sri Neya Crane Services (SNC) is Tamil Nadu’s premier heavy lifting and industrial crane rental enterprise. Providing 24/7 precision lifting, factory machinery rigging, high-mast tower erection, and emergency highway vehicle recovery with an unblemished zero-incident safety record.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://wa.me/917373399937" target="_blank" class="w-9 h-9 bg-zinc-900 hover:bg-cat-yellow hover:text-black text-white flex items-center justify-center transition rounded-xs border border-zinc-700">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+            </a>
+            <a href="tel:+917373399937" class="w-9 h-9 bg-zinc-900 hover:bg-cat-yellow hover:text-black text-white flex items-center justify-center transition rounded-xs border border-zinc-700">
+              <i class="fa-solid fa-phone text-base"></i>
+            </a>
+            <a href="contact.html" class="w-9 h-9 bg-zinc-900 hover:bg-cat-yellow hover:text-black text-white flex items-center justify-center transition rounded-xs border border-zinc-700">
+              <i class="fa-solid fa-map-location-dot text-base"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Crane Fleet -->
+        <div>
+          <h4 class="text-sm font-heading font-bold uppercase text-white tracking-wider mb-4 border-l-2 border-cat-yellow pl-2">Heavy Fleet</h4>
+          <ul class="space-y-2">
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">ACE 14XW Mobile Crane</a></li>
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">ACE 16XW Heavy Hydraulic</a></li>
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">50T Telescopic Mobile Crane</a></li>
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">80T Rough Terrain Heavy</a></li>
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">100T - 250T All-Terrain</a></li>
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">40T Recovery Tow Truck</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Quick Navigation -->
+        <div>
+          <h4 class="text-sm font-heading font-bold uppercase text-white tracking-wider mb-4 border-l-2 border-cat-yellow pl-2">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-cat-yellow transition">Home</a></li>
+            <li><a href="fleet.html" class="hover:text-cat-yellow transition">Fleet Catalog</a></li>
+            <li><a href="projects.html" class="hover:text-cat-yellow transition">1,500+ Completed Works</a></li>
+            <li><a href="tracking.html" class="hover:text-cat-yellow transition">Live GPS Fleet Tracker</a></li>
+            <li><a href="emergency.html" class="hover:text-cat-yellow transition">24/7 Emergency Dispatch</a></li>
+            <li><a href="about.html" class="hover:text-cat-yellow transition">About SNC</a></li>
+            <li><a href="contact.html" class="hover:text-cat-yellow transition">Contact & HQ Map</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: 24/7 Head Office & Contact -->
+        <div>
+          <h4 class="text-sm font-heading font-bold uppercase text-white tracking-wider mb-4 border-l-2 border-cat-yellow pl-2">Head Office</h4>
+          <div class="space-y-3">
+            <div class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-cat-yellow mt-0.5 shrink-0"></i>
+              <span>Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul, Tamil Nadu</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <i class="fa-solid fa-phone text-cat-yellow mt-0.5 shrink-0"></i>
+              <div>
+                <a href="tel:+917373399937" class="hover:text-cat-yellow block font-bold text-white">+91 7373399937</a>
+                <a href="tel:+918870268899" class="hover:text-cat-yellow block">+91 8870268899</a>
+                <a href="tel:+919042815504" class="hover:text-cat-yellow block">+91 9042815504</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-cat-yellow shrink-0"></i>
+              <span class="text-white font-semibold">24/7 365 Days On-Call</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Safety Policy Strip -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500">
+        <div>
+          &copy; 2026 SRI NEYA CRANE SERVICES (SNC). All Rights Reserved. Heavy Lifting & Rigging Solutions.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="about.html" class="hover:text-cat-yellow transition">Safety Protocols</a>
+          <a href="fleet.html" class="hover:text-cat-yellow transition">Load Charts</a>
+          <a href="tracking.html" class="hover:text-cat-yellow transition">Fleet Telemetry</a>
+          <a href="contact.html" class="hover:text-cat-yellow transition">HQ Location</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL DIALOG -->
+  <div id="bookingModal" class="snc-modal-backdrop">
+    <div class="snc-modal-content p-6 sm:p-8">
+      <button id="closeBookingModal" class="snc-modal-close" aria-label="Close Modal">&times;</button>
+      
+      <div class="border-b border-zinc-700 pb-4 mb-5">
+        <span class="text-xs uppercase font-extrabold text-cat-yellow tracking-widest">SRI NEYA CRANE SERVICES</span>
+        <h3 class="text-2xl font-black uppercase text-white mt-1">Book Heavy Crane / Request Quote</h3>
+        <p class="text-xs text-zinc-400 mt-1">Our 24/7 dispatch desk coordinates instantaneous vehicle allotment and certified crew dispatch.</p>
+      </div>
+
+      <form id="craneBookingForm" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="cat-label">Your Name / Company Name</label>
+            <input type="text" id="bookName" class="cat-input" placeholder="e.g. Ramesh / L&T Project" required>
+          </div>
+          <div>
+            <label class="cat-label">Contact Phone Number</label>
+            <input type="tel" id="bookPhone" class="cat-input" placeholder="e.g. +91 9876543210" required>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="cat-label">Select Equipment Type</label>
+            <select id="bookCraneType" class="cat-input">
+              <option>ACE 14XW Pick & Carry (14 Ton)</option>
+              <option>ACE 16XW Heavy Hydraulic (16 Ton)</option>
+              <option>50-Ton Telescopic Mobile Crane</option>
+              <option>80-Ton Rough Terrain Heavy Crane</option>
+              <option>100T - 250T All-Terrain Heavy Crane</option>
+              <option>Dual Crane Synchronized Tandem Lift</option>
+              <option>40T Emergency Breakdown Recovery Truck</option>
+            </select>
+          </div>
+          <div>
+            <label class="cat-label">Job Site Location</label>
+            <input type="text" id="bookLocation" class="cat-input" placeholder="e.g. Dindigul, Nilakottai, Madurai, Karur" required>
+          </div>
+        </div>
+
+        <div>
+          <label class="cat-label">Lifting Details / Load Weight / Urgency</label>
+          <textarea id="bookNotes" rows="3" class="cat-input" placeholder="Describe load weight (Tons), lift height, site accessibility or urgency..."></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <button type="submit" class="btn-cat-primary flex-1 text-center py-3.5">
+            <i class="fa-brands fa-whatsapp text-green-900 mr-1 text-base"></i> Send Booking to 24/7 Operations Desk
+          </button>
+          <a href="tel:+917373399937" class="btn-cat-secondary text-center py-3.5 px-5">
+            <i class="fa-solid fa-phone mr-1"></i> Call Now
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- WORK DETAIL INSPECTOR MODAL -->
+  <div id="workDetailModal" class="snc-modal-backdrop">
+    <div class="snc-modal-content max-w-3xl">
+      <button class="snc-modal-close close-modal-trigger" aria-label="Close Modal">&times;</button>
+      <div id="workDetailContent"></div>
+    </div>
+  </div>
+
+  <!-- VEHICLE DETAIL INSPECTOR MODAL -->
+  <div id="vehicleDetailModal" class="snc-modal-backdrop">
+    <div class="snc-modal-content max-w-2xl">
+      <button class="snc-modal-close close-modal-trigger" aria-label="Close Modal">&times;</button>
+      <div id="vehicleDetailContent"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

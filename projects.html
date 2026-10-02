@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1,500+ Completed Projects & Heavy Lifting Works | SRI NEYA CRANE SERVICES</title>
+  <meta name="description" content="Explore our track record of over 1,500+ successfully completed heavy crane lifts, plant machinery installations, high-mast lighting erections, and emergency highway recoveries across Tamil Nadu.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cat: {
+              yellow: '#FFCD11',
+              yellowHover: '#E5B700',
+              black: '#000000',
+              charcoal: '#121212',
+              dark: '#1E1E1E',
+              card: '#252525',
+              border: '#383838'
+            }
+          },
+          fontFamily: {
+            heading: ['Barlow', 'Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-cat-charcoal text-white font-body selection:bg-cat-yellow selection:text-black">
+
+  <!-- TOP BAR -->
+  <div class="cat-top-bar text-xs border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2 text-zinc-300">
+          <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="font-bold text-cat-yellow uppercase tracking-wider">VERIFIED PROJECT DATABASE: 1,542+ ENTRIES</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+917373399937" class="font-bold text-white hover:text-cat-yellow transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-cat-yellow"></i> +91 7373399937
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="cat-navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="snc-emblem-logo">
+          <div class="snc-triangle-badge"></div>
+          <div class="snc-brand-text">
+            <span class="snc-brand-title">SRI NEYA</span>
+            <span class="snc-brand-subtitle">CRANE SERVICES</span>
+          </div>
+        </a>
+
+        <nav class="hidden xl:flex items-center space-x-1">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="fleet.html" class="nav-link">Fleet Catalog</a>
+          <a href="projects.html" class="nav-link active">1500+ Works</a>
+          <a href="tracking.html" class="nav-link">Live Fleet Tracker</a>
+          <a href="emergency.html" class="nav-link text-red-400 hover:text-red-300 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            24/7 Emergency
+          </a>
+          <a href="about.html" class="nav-link">About SNC</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center space-x-3">
+          <a href="emergency.html" class="btn-cat-emergency text-xs py-2.5 px-3.5">
+            <i class="fa-solid fa-truck-medical"></i>
+            <span>SOS Dispatch</span>
+          </a>
+          <button class="open-booking-modal btn-cat-primary text-xs py-2.5 px-4">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Crane</span>
+          </button>
+        </div>
+
+        <div class="xl:hidden flex items-center gap-2">
+          <button id="mobileMenuToggle" class="p-2 text-white hover:text-cat-yellow focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col p-6 overflow-y-auto">
+    <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+      <a href="index.html" class="snc-emblem-logo">
+        <div class="snc-triangle-badge"></div>
+        <div class="snc-brand-text">
+          <span class="snc-brand-title">SRI NEYA</span>
+          <span class="snc-brand-subtitle">CRANE SERVICES</span>
+        </div>
+      </a>
+      <button id="closeMobileDrawer" class="text-white text-3xl hover:text-cat-yellow">&times;</button>
+    </div>
+    <nav class="flex flex-col space-y-4 mt-6 text-lg font-heading font-bold uppercase tracking-wider">
+      <a href="index.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Home</a>
+      <a href="fleet.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Fleet Catalog</a>
+      <a href="projects.html" class="text-cat-yellow border-b border-zinc-800 pb-2">1,500+ Completed Works</a>
+      <a href="tracking.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Live GPS Fleet Tracker</a>
+      <a href="emergency.html" class="text-red-400 hover:text-red-300 border-b border-zinc-800 pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-truck-medical"></i> 24/7 Emergency
+      </a>
+      <a href="about.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">About SNC</a>
+      <a href="contact.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Contact & HQ Map</a>
+    </nav>
+    <div class="mt-8 space-y-3">
+      <button class="open-booking-modal btn-cat-primary w-full text-center">Book Crane Now</button>
+      <a href="tel:+917373399937" class="btn-cat-secondary w-full text-center">Call 24/7 Dispatch</a>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-cat-black py-12 border-b-2 border-cat-yellow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-pretitle">OPERATIONAL LOG ARCHIVE</div>
+      <h1 class="text-3xl sm:text-5xl font-black uppercase text-white tracking-tight">
+        1,500+ EXECUTED HEAVY LIFTS & INDUSTRIAL ERECTIONS
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-300 max-w-3xl mt-3">
+        A legacy of precision lifting excellence across Tamil Nadu. Review our documented project cases in power utilities, infrastructure, industrial manufacturing, and emergency highway clearance.
+      </p>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT SLIDER SECTION -->
+  <section class="py-12 bg-cat-dark border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-title-wrap mb-6">
+        <div class="section-pretitle">ON-SITE REAL RIGGING</div>
+        <h2 class="text-2xl sm:text-3xl font-black uppercase text-white">FEATURED RIGGING PHOTOGRAPHS</h2>
+      </div>
+
+      <div class="snc-carousel-container shadow-2xl">
+        <div class="snc-carousel-track" id="sncCarouselTrack">
+          
+          <div class="snc-carousel-slide">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-high-mast-erection.jpg" alt="High Mast Floodlight Tower Erection" class="snc-slide-img">
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase">LOG #SNC-W1542</span>
+                  <h3 class="text-2xl font-black text-white mt-1 uppercase">30-Meter High-Mast Light Tower Installation</h3>
+                  <p class="text-xs text-zinc-300">Dindigul Town Center Junction &bull; ACE 16XW Heavy Hydraulic Crane</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="snc-carousel-slide">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-power-transformer-lift.jpg" alt="Power Line Pole Rigging" class="snc-slide-img">
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase">LOG #SNC-W1540</span>
+                  <h3 class="text-2xl font-black text-white mt-1 uppercase">TNEB Power Substation Transformer Rigging</h3>
+                  <p class="text-xs text-zinc-300">Natham-Dindigul Utility Corridor &bull; ACE Mobile Crane + Ground Riggers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="snc-carousel-slide">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual ACE Crane Tandem Lift" class="snc-slide-img">
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase">LOG #SNC-W1541</span>
+                  <h3 class="text-2xl font-black text-white mt-1 uppercase">Dual-Crane Factory Machinery Synchronized Lift</h3>
+                  <p class="text-xs text-zinc-300">SIPCOT Industrial Complex, Nilakottai &bull; Dual ACE 14XW & 16XW</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="snc-carousel-slide">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-telecom-tower-lift.jpg" alt="Rooftop Telecom Tower Lift" class="snc-slide-img">
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase">LOG #SNC-W1539</span>
+                  <h3 class="text-2xl font-black text-white mt-1 uppercase">Commercial Building Rooftop GSM Tower Rigging</h3>
+                  <p class="text-xs text-zinc-300">Ponnagaram Commercial Center, Dindigul &bull; ACE Telescopic Mobile Crane</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button id="sncCarouselPrev" class="snc-carousel-nav-btn snc-carousel-prev" aria-label="Previous">
+          <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <button id="sncCarouselNext" class="snc-carousel-nav-btn snc-carousel-next" aria-label="Next">
+          <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+      </div>
+
+      <div class="snc-thumbnail-strip">
+        <div class="snc-thumbnail active" data-slide-index="0">
+          <img src="assets/images/project-high-mast-erection.jpg" alt="Thumb 1">
+        </div>
+        <div class="snc-thumbnail" data-slide-index="1">
+          <img src="assets/images/project-power-transformer-lift.jpg" alt="Thumb 2">
+        </div>
+        <div class="snc-thumbnail" data-slide-index="2">
+          <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Thumb 3">
+        </div>
+        <div class="snc-thumbnail" data-slide-index="3">
+          <img src="assets/images/project-telecom-tower-lift.jpg" alt="Thumb 4">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DASHBOARD SECTION -->
+  <section class="py-16 bg-cat-charcoal border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Filter Toolbar -->
+      <div class="bg-zinc-950 p-4 border border-zinc-800 rounded-sm mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2 flex-wrap w-full md:w-auto">
+          <button class="work-filter-btn active" data-sector="all">All Sectors</button>
+          <button class="work-filter-btn" data-sector="industrial">Factory Machinery</button>
+          <button class="work-filter-btn" data-sector="lighting">High-Mast & Poles</button>
+          <button class="work-filter-btn" data-sector="power">Power & Utilities</button>
+          <button class="work-filter-btn" data-sector="telecom">Telecom Towers</button>
+          <button class="work-filter-btn" data-sector="rescue">Highway Rescue</button>
+          <button class="work-filter-btn" data-sector="infrastructure">Infrastructure</button>
+        </div>
+
+        <div class="w-full md:w-72 relative">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 text-sm"></i>
+          <input type="text" id="workSearchInput" placeholder="Search project, location, client..." class="cat-input pl-9 text-xs py-2.5">
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="worksDashboardGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Javascript populated -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-cat-black border-t-4 border-cat-yellow pt-16 pb-10 text-zinc-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-zinc-800">
+        <div class="md:col-span-2 space-y-3">
+          <a href="index.html" class="snc-emblem-logo">
+            <div class="snc-triangle-badge"></div>
+            <div class="snc-brand-text">
+              <span class="snc-brand-title">SRI NEYA</span>
+              <span class="snc-brand-subtitle">CRANE SERVICES</span>
+            </div>
+          </a>
+          <p class="text-xs text-zinc-400 max-w-md">Kullanampatti Petrol Bunk, Ponnagaram, Natham Byepass, Dindigul, Tamil Nadu.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold uppercase mb-3">Direct Dispatch Lines</h4>
+          <p class="text-white font-bold">+91 7373399937</p>
+          <p class="text-zinc-300">+91 8870268899</p>
+          <p class="text-zinc-300">+91 9042815504</p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold uppercase mb-3">Quick Navigation</h4>
+          <div class="space-y-1">
+            <div><a href="index.html" class="hover:text-cat-yellow">Home</a></div>
+            <div><a href="fleet.html" class="hover:text-cat-yellow">Fleet Catalog</a></div>
+            <div><a href="tracking.html" class="hover:text-cat-yellow">Live Fleet Tracker</a></div>
+            <div><a href="contact.html" class="hover:text-cat-yellow">Contact & HQ Map</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-6 text-center text-zinc-500">
+        &copy; 2026 SRI NEYA CRANE SERVICES. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WORK DETAIL INSPECTOR MODAL -->
+  <div id="workDetailModal" class="snc-modal-backdrop">
+    <div class="snc-modal-content max-w-3xl">
+      <button class="snc-modal-close close-modal-trigger">&times;</button>
+      <div id="workDetailContent"></div>
+    </div>
+  </div>
+
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="snc-modal-backdrop">
+    <div class="snc-modal-content p-6 sm:p-8">
+      <button id="closeBookingModal" class="snc-modal-close">&times;</button>
+      <div class="border-b border-zinc-700 pb-4 mb-5">
+        <span class="text-xs uppercase font-extrabold text-cat-yellow tracking-widest">SRI NEYA CRANE SERVICES</span>
+        <h3 class="text-2xl font-black uppercase text-white mt-1">Book Heavy Equipment</h3>
+      </div>
+      <form id="craneBookingForm" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="cat-label">Name / Company</label>
+            <input type="text" id="bookName" class="cat-input" required placeholder="Your Name">
+          </div>
+          <div>
+            <label class="cat-label">Phone Number</label>
+            <input type="tel" id="bookPhone" class="cat-input" required placeholder="+91 9876543210">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="cat-label">Select Equipment</label>
+            <select id="bookCraneType" class="cat-input">
+              <option>ACE 14XW Mobile Crane (14T)</option>
+              <option>ACE 16XW Heavy Hydraulic (16T)</option>
+              <option>50-Ton Telescopic Mobile Crane</option>
+              <option>80-Ton Rough Terrain Crane</option>
+              <option>100T - 250T All-Terrain Crane</option>
+              <option>Synchronized Tandem Lift Team</option>
+              <option>40T Emergency Recovery Wrecker</option>
+            </select>
+          </div>
+          <div>
+            <label class="cat-label">Location / Site</label>
+            <input type="text" id="bookLocation" class="cat-input" required placeholder="Dindigul / Surrounding Site">
+          </div>
+        </div>
+        <div>
+          <label class="cat-label">Notes & Specifications</label>
+          <textarea id="bookNotes" rows="3" class="cat-input" placeholder="Weight, lift radius, height..."></textarea>
+        </div>
+        <button type="submit" class="btn-cat-primary w-full py-3.5">
+          <i class="fa-brands fa-whatsapp mr-1 text-base"></i> Submit Booking to 24/7 Operations Desk
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
