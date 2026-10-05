@@ -32,6 +32,7 @@
   </script>
   <!-- Custom Caterpillar Design System Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/crane-loader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-cat-charcoal text-white font-body selection:bg-cat-yellow selection:text-black">
@@ -83,6 +84,9 @@
         <!-- Desktop Navigation Links -->
         <nav class="hidden xl:flex items-center space-x-1">
           <a href="index.html" class="nav-link active">Home</a>
+          <a href="crane-automation.html" class="nav-link text-cat-yellow font-bold flex items-center gap-1.5 hover:text-white">
+            <i class="fa-solid fa-gears text-cat-yellow"></i> 3D Automation
+          </a>
           <a href="fleet.html" class="nav-link">Fleet Catalog</a>
           <a href="projects.html" class="nav-link">1500+ Works</a>
           <a href="tracking.html" class="nav-link">Live Fleet Tracker</a>
@@ -134,6 +138,9 @@
     </div>
     <nav class="flex flex-col space-y-4 mt-6 text-lg font-heading font-bold uppercase tracking-wider">
       <a href="index.html" class="text-cat-yellow border-b border-zinc-800 pb-2">Home</a>
+      <a href="crane-automation.html" class="text-cat-yellow border-b border-zinc-800 pb-2 flex items-center gap-2">
+        <i class="fa-solid fa-gears"></i> 3D Crane Automation Lab
+      </a>
       <a href="fleet.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Fleet Catalog (10T - 250T)</a>
       <a href="projects.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">1,500+ Completed Works</a>
       <a href="tracking.html" class="text-white hover:text-cat-yellow border-b border-zinc-800 pb-2">Live GPS Fleet Tracker</a>
@@ -146,6 +153,9 @@
     <div class="mt-8 space-y-3">
       <button class="open-booking-modal btn-cat-primary w-full text-center">
         <i class="fa-solid fa-calendar-check"></i> Book a Crane Now
+      </button>
+      <button onclick="window.openSncCraneLoader()" class="btn-cat-outline w-full text-center">
+        <i class="fa-solid fa-play text-cat-yellow"></i> Replay Animated Lift Loader
       </button>
       <a href="tel:+917373399937" class="btn-cat-secondary w-full text-center">
         <i class="fa-solid fa-phone"></i> Call 24/7 Dispatch Desk
@@ -208,13 +218,17 @@
               <i class="fa-solid fa-calculator"></i>
               <span>Request Instant Quote</span>
             </button>
-            <a href="tel:+917373399937" class="btn-cat-secondary text-base py-3.5 px-6">
+            <button onclick="window.openSncCraneLoader()" class="btn-cat-outline text-base py-3.5 px-5 flex items-center gap-2">
+              <i class="fa-solid fa-play text-cat-yellow"></i>
+              <span>3D Lift Loader</span>
+            </button>
+            <a href="crane-automation.html" class="btn-cat-dark text-base py-3.5 px-5 flex items-center gap-2">
+              <i class="fa-solid fa-sliders text-cat-yellow"></i>
+              <span>Automation Lab</span>
+            </a>
+            <a href="tel:+917373399937" class="btn-cat-secondary text-base py-3.5 px-5">
               <i class="fa-solid fa-phone"></i>
               <span>+91 7373399937</span>
-            </a>
-            <a href="tracking.html" class="btn-cat-dark text-base py-3.5 px-5">
-              <i class="fa-solid fa-satellite-dish text-cat-yellow"></i>
-              <span>Track Live Fleet</span>
             </a>
           </div>
         </div>
@@ -305,7 +319,49 @@
       <div class="snc-carousel-container shadow-2xl">
         <div class="snc-carousel-track" id="sncCarouselTrack">
           
-          <!-- Slide 1: High Mast Erection -->
+          <!-- Slide 1: Dual Crane PEB Truss Tandem Lift -->
+          <div class="snc-carousel-slide" data-antigravity-asset="peb-truss-tandem-lift">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-peb-truss-tandem-lift.jpg" alt="Dual ACE Crane Steel PEB Roof Truss Tandem Erection" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1544</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Dual ACE Crane Steel PEB Truss Tandem Erection</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    Synchronized twin ACE crane precision lift erecting a wide-span heavy structural steel PEB triangular roof truss frame atop building concrete slab with zero deflection.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1544')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: High-Reach Rooftop Material Lift -->
+          <div class="snc-carousel-slide" data-antigravity-asset="building-material-lift">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-building-material-lift.jpg" alt="ACE 16XW Mobile Crane Rooftop Material Hoisting" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1543</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Multi-Storey Rooftop Heavy Material & Slab Hoisting</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    High-reach telescopic boom operation with ACE heavy mobile crane (TN-57-BL-9267) safely hoisting heavy building materials and slabs to multi-storey terrace.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1543')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: High Mast Erection -->
           <div class="snc-carousel-slide" data-antigravity-asset="high-mast-erection">
             <div class="snc-slide-img-wrap">
               <img src="assets/images/project-high-mast-erection.jpg" alt="High Mast Floodlight Tower Erection with ACE Crane" class="snc-slide-img" />
@@ -326,7 +382,7 @@
             </div>
           </div>
 
-          <!-- Slide 2: Power Transformer / Line Pole Erection -->
+          <!-- Slide 4: Power Transformer / Line Pole Erection -->
           <div class="snc-carousel-slide" data-antigravity-asset="power-transformer-lift">
             <div class="snc-slide-img-wrap">
               <img src="assets/images/project-power-transformer-lift.jpg" alt="TNEB Power Line Pole and Substation Rigging" class="snc-slide-img" />
@@ -347,7 +403,7 @@
             </div>
           </div>
 
-          <!-- Slide 3: Dual Crane Tandem Lift -->
+          <!-- Slide 5: Dual Crane Tandem Lift -->
           <div class="snc-carousel-slide" data-antigravity-asset="dual-crane-tandem-lift">
             <div class="snc-slide-img-wrap">
               <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual ACE Crane Heavy Machinery Tandem Lift" class="snc-slide-img" />
@@ -368,7 +424,7 @@
             </div>
           </div>
 
-          <!-- Slide 4: Rooftop Telecom Tower Lift -->
+          <!-- Slide 6: Rooftop Telecom Tower Lift -->
           <div class="snc-carousel-slide" data-antigravity-asset="telecom-tower-lift">
             <div class="snc-slide-img-wrap">
               <img src="assets/images/project-telecom-tower-lift.jpg" alt="Multi-Storey Rooftop Telecom Tower Heavy Lift" class="snc-slide-img" />
@@ -382,6 +438,27 @@
                 </div>
                 <div class="flex gap-2 shrink-0">
                   <button onclick="openWorkDetail('SNC-W1539')" class="btn-cat-primary text-xs py-2.5 px-4">
+                    <i class="fa-solid fa-circle-info"></i> Project Specs
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 7: High-Angle Slab Lift -->
+          <div class="snc-carousel-slide" data-antigravity-asset="rooftop-heavy-lift">
+            <div class="snc-slide-img-wrap">
+              <img src="assets/images/project-rooftop-heavy-lift.jpg" alt="Precision Rooftop Structural Material Lift" class="snc-slide-img" />
+              <div class="snc-slide-overlay">
+                <div>
+                  <span class="bg-cat-yellow text-black font-extrabold text-xs px-2.5 py-1 uppercase tracking-wider">PROJECT #1538</span>
+                  <h3 class="text-2xl sm:text-3xl font-black text-white mt-1 uppercase">Precision High-Angle Heavy Slab Hoisting</h3>
+                  <p class="text-xs sm:text-sm text-zinc-300 mt-1 max-w-xl">
+                    Smooth boom extension delivering critical construction payloads to elevated work zones with zero ground vibration.
+                  </p>
+                </div>
+                <div class="flex gap-2 shrink-0">
+                  <button onclick="openWorkDetail('SNC-W1538')" class="btn-cat-primary text-xs py-2.5 px-4">
                     <i class="fa-solid fa-circle-info"></i> Project Specs
                   </button>
                 </div>
@@ -403,16 +480,25 @@
       <!-- Thumbnail Selector Strip -->
       <div class="snc-thumbnail-strip">
         <div class="snc-thumbnail active" data-slide-index="0">
-          <img src="assets/images/project-high-mast-erection.jpg" alt="High Mast Erection" />
+          <img src="assets/images/project-peb-truss-tandem-lift.jpg" alt="PEB Truss Tandem Lift" />
         </div>
         <div class="snc-thumbnail" data-slide-index="1">
-          <img src="assets/images/project-power-transformer-lift.jpg" alt="Power Transformer Lift" />
+          <img src="assets/images/project-building-material-lift.jpg" alt="Building Material Lift" />
         </div>
         <div class="snc-thumbnail" data-slide-index="2">
-          <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual Crane Tandem Lift" />
+          <img src="assets/images/project-high-mast-erection.jpg" alt="High Mast Erection" />
         </div>
         <div class="snc-thumbnail" data-slide-index="3">
+          <img src="assets/images/project-power-transformer-lift.jpg" alt="Power Transformer Lift" />
+        </div>
+        <div class="snc-thumbnail" data-slide-index="4">
+          <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual Crane Tandem Lift" />
+        </div>
+        <div class="snc-thumbnail" data-slide-index="5">
           <img src="assets/images/project-telecom-tower-lift.jpg" alt="Telecom Tower Lift" />
+        </div>
+        <div class="snc-thumbnail" data-slide-index="6">
+          <img src="assets/images/project-rooftop-heavy-lift.jpg" alt="Rooftop Heavy Lift" />
         </div>
       </div>
 
@@ -570,14 +656,14 @@
           <div>
             <div class="relative h-52 bg-zinc-950 overflow-hidden">
               <span class="cat-card-header-tag bg-cat-yellow text-black">HIGH DEMAND &bull; 16 TON</span>
-              <img src="assets/images/project-high-mast-erection.jpg" alt="ACE 16XW Heavy Hydraulic Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="assets/images/project-building-material-lift.jpg" alt="ACE 16XW Heavy Hydraulic Crane (TN-57-BL-9267)" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">MODEL: ACE 16XW HEAVY</div>
+              <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">MODEL: ACE 16XW (TN-57-BL-9267)</div>
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold uppercase text-white group-hover:text-cat-yellow transition">ACE 16XW Heavy Hydraulic Crane</h3>
               <p class="text-xs text-zinc-400 mt-2">
-                Heavy lifting workhorse for high mast towers, electrical substations, heavy bridge girder assembly, and tandem factory equipment relocation.
+                Heavy lifting workhorse for high mast towers, electrical substations, multi-storey material elevation, and tandem factory equipment relocation.
               </p>
               
               <div class="grid grid-cols-2 gap-2 mt-4 text-xs">
@@ -656,7 +742,7 @@
           <div>
             <div class="relative h-52 bg-zinc-950 overflow-hidden">
               <span class="cat-card-header-tag">MEGA LIFT CAPACITY</span>
-              <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="100T to 150T All-Terrain Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="assets/images/project-high-mast-erection.jpg" alt="100T to 150T All-Terrain Crane" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">ALL-TERRAIN: 80T - 150T</div>
             </div>
@@ -699,7 +785,7 @@
           <div>
             <div class="relative h-52 bg-zinc-950 overflow-hidden">
               <span class="cat-card-header-tag">SPECIALIZED RIGGING</span>
-              <img src="assets/images/project-dual-crane-tandem-lift.jpg" alt="Dual Crane Synchronized Tandem Lift" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <img src="assets/images/project-peb-truss-tandem-lift.jpg" alt="Dual Crane Synchronized Tandem PEB Truss Lift" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <div class="absolute bottom-3 left-3 text-xs font-mono font-bold text-cat-yellow">TANDEM OPERATION</div>
             </div>
@@ -1098,6 +1184,11 @@
       <div id="vehicleDetailContent"></div>
     </div>
   </div>
+
+  <!-- Crane Automation & Preloader Engine -->
+  <script src="assets/js/crane-audio.js"></script>
+  <script src="assets/js/crane-engine.js"></script>
+  <script src="assets/js/crane-loader.js"></script>
 
   <!-- Main JavaScript -->
   <script src="assets/js/main.js"></script>

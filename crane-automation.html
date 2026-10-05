@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crane Automation & Mechanical Lift Simulator | SRI NEYA CRANE SERVICES</title>
+  <meta name="description" content="Interactive automated crane lifting simulation with real-time kinematics, chain audio, video-movable camera, and heavy steel I-beam hoisting.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cat: {
+              yellow: '#FFCD11',
+              yellowHover: '#E5B700',
+              black: '#000000',
+              charcoal: '#121212',
+              dark: '#1E1E1E',
+              card: '#252525',
+              border: '#383838'
+            }
+          },
+          fontFamily: {
+            heading: ['Barlow', 'Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS & FontAwesome -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/crane-loader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-[#0e0e0e] text-white font-body selection:bg-cat-yellow selection:text-black min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- TOP APP BAR -->
+  <header class="bg-[#161616] border-b border-zinc-800 px-4 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4 z-30">
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-b-[24px] border-b-cat-yellow filter drop-shadow-[0_0_8px_rgba(255,205,17,0.5)]"></div>
+        <div>
+          <span class="font-black tracking-wider text-white text-lg leading-tight block">SRI NEYA <span class="text-cat-yellow">CRANE</span></span>
+          <span class="text-[10px] tracking-widest text-zinc-400 uppercase block font-mono">AUTOMATION & SIMULATION LAB</span>
+        </div>
+      </a>
+      <span class="hidden md:inline text-zinc-600">|</span>
+      <div class="hidden md:flex items-center gap-2 text-xs text-zinc-400 bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded-full">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span>KINEMATICS ENGINE: <strong class="text-cat-yellow font-mono">60 FPS ACTIVE</strong></span>
+      </div>
+    </div>
+
+    <!-- Quick Navigation & Audio Bar -->
+    <div class="flex items-center gap-3">
+      <!-- Sound Toggle -->
+      <button id="pageSoundBtn" class="crane-btn-pill">
+        <i class="fa-solid fa-volume-high text-cat-yellow" id="pageSoundIcon"></i>
+        <span id="pageSoundText">SOUND ON</span>
+        <div class="equalizer-wave playing" id="pageEqualizer">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </button>
+
+      <button onclick="window.openSncCraneLoader()" class="crane-btn-pill hidden sm:flex">
+        <i class="fa-solid fa-play"></i>
+        <span>TEST LOADING SCREEN</span>
+      </button>
+
+      <a href="index.html" class="btn-cat-primary text-xs py-2 px-4 rounded flex items-center gap-2">
+        <i class="fa-solid fa-house"></i>
+        <span>BACK TO WEBSITE</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN SIMULATOR WORKSPACE -->
+  <main class="flex-1 flex flex-col lg:flex-row relative">
+    
+    <!-- LEFT CONTROL & TELEMETRY SIDEBAR -->
+    <aside class="w-full lg:w-80 bg-[#141414] border-r border-zinc-800 p-5 flex flex-col justify-between gap-6 z-20">
+      
+      <!-- Panel 1: Simulation Modes -->
+      <div>
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-cat-yellow flex items-center gap-2">
+            <i class="fa-solid fa-robot"></i> Automation Mode
+          </h2>
+          <span class="text-[10px] font-mono bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded">SELECT</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <button id="btnModeAuto" class="bg-cat-yellow text-black font-extrabold text-xs py-2.5 px-3 rounded flex items-center justify-center gap-2 transition hover:bg-white shadow-[0_0_12px_rgba(255,205,17,0.3)]">
+            <i class="fa-solid fa-play"></i>
+            <span>AUTO LIFT</span>
+          </button>
+          <button id="btnModeManual" class="bg-zinc-800 border border-zinc-700 text-zinc-300 hover:text-white font-bold text-xs py-2.5 px-3 rounded flex items-center justify-center gap-2 transition">
+            <i class="fa-solid fa-gamepad"></i>
+            <span>JOYSTICK</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Panel 2: Crane Live Controls (Manual Joysticks) -->
+      <div id="sidebarManualControls" class="bg-[#1a1a1a] border border-zinc-800 rounded-lg p-4 flex flex-col gap-4">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-300 flex items-center justify-between">
+          <span>Manual Actuators</span>
+          <i class="fa-solid fa-gears text-cat-yellow"></i>
+        </h3>
+
+        <!-- Boom Pitch Slider -->
+        <div>
+          <div class="flex justify-between text-xs font-mono text-zinc-400 mb-1">
+            <span>BOOM PITCH:</span>
+            <strong class="text-cat-yellow" id="sideValBoom">38°</strong>
+          </div>
+          <input type="range" min="20" max="68" value="38" class="w-full crane-slider" id="sideSliderBoom">
+        </div>
+
+        <!-- Hoist Winch Slider -->
+        <div>
+          <div class="flex justify-between text-xs font-mono text-zinc-400 mb-1">
+            <span>HOIST WINCH:</span>
+            <strong class="text-cat-yellow" id="sideValWinch">260 px</strong>
+          </div>
+          <input type="range" min="90" max="320" value="260" class="w-full crane-slider" id="sideSliderWinch">
+        </div>
+
+        <!-- Telescopic Boom Slider -->
+        <div>
+          <div class="flex justify-between text-xs font-mono text-zinc-400 mb-1">
+            <span>TELESCOPIC BOOM:</span>
+            <strong class="text-cat-yellow" id="sideValTele">1.0x</strong>
+          </div>
+          <input type="range" min="1.0" max="1.65" step="0.05" value="1.0" class="w-full crane-slider" id="sideSliderTele">
+        </div>
+
+        <!-- Track Traverse Slider -->
+        <div>
+          <div class="flex justify-between text-xs font-mono text-zinc-400 mb-1">
+            <span>TRACK DRIVE:</span>
+            <strong class="text-cat-yellow" id="sideValTrack">0 px</strong>
+          </div>
+          <input type="range" min="-130" max="130" value="0" class="w-full crane-slider" id="sideSliderTrack">
+        </div>
+      </div>
+
+      <!-- Panel 3: Payload Weight Selector -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2 flex items-center gap-2">
+          <i class="fa-solid fa-weight-hanging text-cat-yellow"></i>
+          <span>Rigged Payload Type</span>
+        </h3>
+        <select id="payloadSelector" class="w-full bg-zinc-900 border border-zinc-700 text-white text-xs font-medium rounded p-2.5 focus:border-cat-yellow outline-none">
+          <option value="steel_beams">3x Structural Steel I-Beams (45.0 Tonnes)</option>
+          <option value="transformer">Heavy 3-Phase Transformer (85.0 Tonnes)</option>
+          <option value="generator">Industrial Diesel Generator (60.0 Tonnes)</option>
+          <option value="blade">Wind Turbine Rotor Blade (32.0 Tonnes)</option>
+        </select>
+      </div>
+
+      <!-- Panel 4: Live Audio Soundboard -->
+      <div class="bg-[#181818] border border-zinc-800 rounded-lg p-3">
+        <h4 class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Mechanical Audio Test</h4>
+        <div class="grid grid-cols-2 gap-1.5 text-[11px]">
+          <button onclick="window.sncCraneAudio.playChainClink(1.2)" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
+            ⛓️ Chain Clink
+          </button>
+          <button onclick="window.sncCraneAudio.playTensionCreak()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
+            ⚡ Strain Groan
+          </button>
+          <button onclick="window.sncCraneAudio.playAirRelease()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
+            💨 Air Brake
+          </button>
+          <button onclick="window.sncCraneAudio.playIndustrialHorn()" class="bg-zinc-800 hover:bg-zinc-700 text-cat-yellow py-1.5 px-2 rounded font-mono font-bold">
+            📢 Dual Horn
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- CENTER VIDEO-MOVABLE SIMULATION STAGE -->
+    <div class="flex-1 relative bg-gradient-to-b from-[#181818] via-[#101010] to-[#080808] flex flex-col justify-between overflow-hidden min-h-[550px]">
+      
+      <!-- Blueprint Grid Canvas Background -->
+      <div class="crane-blueprint-grid"></div>
+
+      <!-- Top Overlay: Telemetry HUD -->
+      <div class="relative z-10 p-4 flex flex-wrap justify-between items-start gap-4">
+        
+        <!-- Detailed Heavy Lift HUD -->
+        <div class="bg-[#121212]/90 border border-zinc-700/80 border-l-4 border-l-cat-yellow rounded-lg p-3.5 shadow-2xl backdrop-blur-md">
+          <div class="text-[10px] font-mono text-zinc-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span>CRANE TELEMETRY SYSTEM // SNC-250T</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+            <div>
+              <span class="text-zinc-500 block text-[10px]">BOOM ANGLE</span>
+              <span class="text-cat-yellow font-bold text-sm" id="sncHudAngle">38.0°</span>
+            </div>
+            <div>
+              <span class="text-zinc-500 block text-[10px]">WORKING RADIUS</span>
+              <span class="text-white font-bold text-sm" id="sncHudRadius">18.4 m</span>
+            </div>
+            <div>
+              <span class="text-zinc-500 block text-[10px]">HOOK HEIGHT</span>
+              <span class="text-white font-bold text-sm" id="sncHudHeight">0.0 m</span>
+            </div>
+            <div>
+              <span class="text-zinc-500 block text-[10px]">SAFE LOAD (SWL)</span>
+              <span class="text-emerald-400 font-bold text-sm" id="sncHudSWL">76% SAFE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Camera & Perspective Controls -->
+        <div class="flex items-center gap-1.5 bg-[#121212]/90 border border-zinc-700/80 p-1.5 rounded-lg shadow-xl backdrop-blur-md">
+          <button id="camViewWide" class="px-2.5 py-1 text-xs rounded bg-cat-yellow text-black font-bold">WIDE</button>
+          <button id="camViewHook" class="px-2.5 py-1 text-xs rounded bg-zinc-800 text-zinc-300 hover:text-white font-medium">HOOK CAM</button>
+          <button id="camViewCab" class="px-2.5 py-1 text-xs rounded bg-zinc-800 text-zinc-300 hover:text-white font-medium">CABIN</button>
+          <span class="text-zinc-600 px-1">|</span>
+          <button id="camZoomIn" class="w-7 h-7 rounded bg-zinc-800 hover:bg-zinc-700 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-plus"></i></button>
+          <button id="camZoomOut" class="w-7 h-7 rounded bg-zinc-800 hover:bg-zinc-700 text-white flex items-center justify-center text-xs"><i class="fa-solid fa-minus"></i></button>
+          <button id="camReset" class="w-7 h-7 rounded bg-zinc-800 hover:bg-zinc-700 text-white flex items-center justify-center text-xs" title="Reset Camera"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+      </div>
+
+      <!-- Main Articulated Crane Stage Mount -->
+      <div class="crane-stage-viewport" id="simStageViewport" style="flex: 1; min-height: 440px;">
+        <div class="crane-stage-canvas-wrap" id="simStageWrap">
+          <div id="simCraneMount" style="width:100%; height:100%; display:flex; justify-content:center; align-items:center;"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Stage Bar: Video Playback & Timeline Controls -->
+      <div class="relative z-10 bg-[#111111]/90 border-t border-zinc-800 px-6 py-3 flex flex-wrap items-center justify-between gap-4 backdrop-blur-md">
+        
+        <div class="flex items-center gap-4">
+          <button id="btnPlayPause" class="w-9 h-9 rounded-full bg-cat-yellow text-black flex items-center justify-center font-bold text-sm shadow-[0_0_15px_rgba(255,205,17,0.4)] hover:bg-white transition">
+            <i class="fa-solid fa-pause" id="playPauseIcon"></i>
+          </button>
+
+          <div class="text-xs font-mono">
+            <span class="text-zinc-400">CYCLE STATE:</span>
+            <span class="text-cat-yellow font-bold uppercase ml-1" id="simCycleStateText">LIFTING PAYLOAD</span>
+          </div>
+        </div>
+
+        <!-- Speed Selector (Slow Motion & Realtime) -->
+        <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
+          <span>SPEED:</span>
+          <button data-speed="0.5" class="speed-btn px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300">0.5x</button>
+          <button data-speed="1.0" class="speed-btn px-2 py-1 rounded bg-cat-yellow text-black font-bold">1.0x</button>
+          <button data-speed="2.0" class="speed-btn px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300">2.0x</button>
+        </div>
+
+        <div class="text-xs text-zinc-400 hidden sm:flex items-center gap-2">
+          <i class="fa-solid fa-hand-pointer text-cat-yellow"></i>
+          <span>Click & Drag canvas to move / Scroll to zoom</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/crane-audio.js"></script>
+  <script src="assets/js/crane-engine.js"></script>
+  <script src="assets/js/crane-loader.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mount = document.getElementById('simCraneMount');
+      let sim = null;
+
+      if (mount) {
+        sim = new SncCraneSimulation(mount, {
+          mode: 'auto',
+          autoCycle: true,
+          soundEnabled: true,
+          onProgress: (prog, phase) => {
+            const stateText = document.getElementById('simCycleStateText');
+            if (stateText) {
+              stateText.textContent = phase.toUpperCase() + ` (${Math.round(prog)}%)`;
+            }
+          }
+        });
+      }
+
+      // Audio Toggle for the page
+      const soundBtn = document.getElementById('pageSoundBtn');
+      const soundIcon = document.getElementById('pageSoundIcon');
+      const soundText = document.getElementById('pageSoundText');
+      const eq = document.getElementById('pageEqualizer');
+
+      if (soundBtn && window.sncCraneAudio) {
+        soundBtn.addEventListener('click', () => {
+          window.sncCraneAudio.resume();
+          const muted = window.sncCraneAudio.toggleMute();
+          if (muted) {
+            soundIcon.className = 'fa-solid fa-volume-xmark text-zinc-500';
+            soundText.textContent = 'MUTED';
+            eq.classList.remove('playing');
+          } else {
+            soundIcon.className = 'fa-solid fa-volume-high text-cat-yellow';
+            soundText.textContent = 'SOUND ON';
+            eq.classList.add('playing');
+          }
+        });
+      }
+
+      // Mode Switching
+      const btnAuto = document.getElementById('btnModeAuto');
+      const btnManual = document.getElementById('btnModeManual');
+
+      btnAuto.addEventListener('click', () => {
+        if (!sim) return;
+        sim.options.mode = 'auto';
+        sim.state.isPaused = false;
+        btnAuto.className = "bg-cat-yellow text-black font-extrabold text-xs py-2.5 px-3 rounded flex items-center justify-center gap-2 shadow-[0_0_12px_rgba(255,205,17,0.3)]";
+        btnManual.className = "bg-zinc-800 border border-zinc-700 text-zinc-300 font-bold text-xs py-2.5 px-3 rounded flex items-center justify-center gap-2";
+      });
+
+      btnManual.addEventListener('click', () => {
+        if (!sim) return;
+        sim.options.mode = 'manual';
+        btnManual.className = "bg-cat-yellow text-black font-extrabold text-xs py-2.5 px-3 rounded flex items-center justify-center gap-2 shadow-[0_0_12px_rgba(255,205,17,0.3)]";
+        btnAuto.className = "bg-zinc-800 border border-zinc-700 text-zinc-300 font-bold text-xs py-2.5 px-3 rounded flex items-center justify-center gap-2";
+      });
+
+      // Manual Sliders
+      const sBoom = document.getElementById('sideSliderBoom');
+      const sWinch = document.getElementById('sideSliderWinch');
+      const sTele = document.getElementById('sideSliderTele');
+      const sTrack = document.getElementById('sideSliderTrack');
+
+      const updateManual = () => {
+        if (!sim) return;
+        sim.options.mode = 'manual';
+        btnManual.click();
+
+        const b = parseFloat(sBoom.value);
+        const w = parseFloat(sWinch.value);
+        const t = parseFloat(sTele.value);
+        const k = parseFloat(sTrack.value);
+
+        document.getElementById('sideValBoom').textContent = `${b}°`;
+        document.getElementById('sideValWinch').textContent = `${w} px`;
+        document.getElementById('sideValTele').textContent = `${t.toFixed(1)}x`;
+        document.getElementById('sideValTrack').textContent = `${k} px`;
+
+        sim.setManualControls(b, w, t, k);
+      };
+
+      sBoom.addEventListener('input', updateManual);
+      sWinch.addEventListener('input', updateManual);
+      sTele.addEventListener('input', updateManual);
+      sTrack.addEventListener('input', updateManual);
+
+      // Play / Pause
+      const playBtn = document.getElementById('btnPlayPause');
+      const playIcon = document.getElementById('playPauseIcon');
+      playBtn.addEventListener('click', () => {
+        if (!sim) return;
+        sim.state.isPaused = !sim.state.isPaused;
+        playIcon.className = sim.state.isPaused ? 'fa-solid fa-play' : 'fa-solid fa-pause';
+      });
+
+      // Speed Buttons
+      document.querySelectorAll('.speed-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          document.querySelectorAll('.speed-btn').forEach(b => {
+            b.className = "speed-btn px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-zinc-300";
+          });
+          btn.className = "speed-btn px-2 py-1 rounded bg-cat-yellow text-black font-bold";
+          if (sim) sim.state.cycleSpeed = parseFloat(btn.dataset.speed);
+        });
+      });
+
+      // Camera Presets
+      document.getElementById('camViewWide').addEventListener('click', () => {
+        if (sim) sim.setCamera(1.0, 0, 0);
+      });
+      document.getElementById('camViewHook').addEventListener('click', () => {
+        if (sim) sim.setCamera(1.6, 200, -80);
+      });
+      document.getElementById('camViewCab').addEventListener('click', () => {
+        if (sim) sim.setCamera(1.8, -250, -100);
+      });
+      document.getElementById('camZoomIn').addEventListener('click', () => {
+        if (sim) sim.setCamera(sim.state.cameraZoom * 1.2, sim.state.cameraPanX, sim.state.cameraPanY);
+      });
+      document.getElementById('camZoomOut').addEventListener('click', () => {
+        if (sim) sim.setCamera(sim.state.cameraZoom * 0.8, sim.state.cameraPanX, sim.state.cameraPanY);
+      });
+      document.getElementById('camReset').addEventListener('click', () => {
+        if (sim) sim.setCamera(1.0, 0, 0);
+      });
+
+      // Payload selector
+      document.getElementById('payloadSelector').addEventListener('change', (e) => {
+        const val = e.target.value;
+        if (val === 'steel_beams') sim.state.loadWeightTons = 45.0;
+        else if (val === 'transformer') sim.state.loadWeightTons = 85.0;
+        else if (val === 'generator') sim.state.loadWeightTons = 60.0;
+        else if (val === 'blade') sim.state.loadWeightTons = 32.0;
+      });
+    });
+  </script>
+</body>
+</html>

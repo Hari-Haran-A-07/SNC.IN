@@ -129,16 +129,42 @@ function initProjectSlider() {
    ============================================================ */
 const SNC_COMPLETED_WORKS = [
   {
+    id: "SNC-W1544",
+    title: "Dual ACE Crane Steel PEB Roof Truss Tandem Erection",
+    sector: "infrastructure",
+    sectorLabel: "PEB Truss & Structural",
+    location: "Dindigul Highway Industrial Corridor",
+    client: "Commercial Logistics & Warehouse EPC",
+    capacity: "Combined 32 Ton (Dual ACE 16XW Tandem Lift)",
+    date: "Oct 2026",
+    status: "Completed - 100% Precision Alignment",
+    description: "Synchronized dual ACE crane tandem lift erecting wide-span heavy structural steel PEB triangular roof truss frame atop building concrete slab with zero deflection.",
+    image: "assets/images/project-peb-truss-tandem-lift.jpg"
+  },
+  {
+    id: "SNC-W1543",
+    title: "Multi-Storey Rooftop Heavy Material & Slab Hoisting",
+    sector: "infrastructure",
+    sectorLabel: "Urban Construction",
+    location: "Ponnagaram Commercial Hub, Dindigul",
+    client: "Urban Infrastructure & Building Developers",
+    capacity: "16 Ton (ACE 16XW Reg: TN-57-BL-9267)",
+    date: "Sep 2026",
+    status: "Completed - Precision Hoisting",
+    description: "High-reach boom extension with ACE hydraulic mobile crane (TN-57-BL-9267) safely hoisting heavy construction materials, granite slabs, and structural components to multi-storey building terrace.",
+    image: "assets/images/project-building-material-lift.jpg"
+  },
+  {
     id: "SNC-W1542",
     title: "High-Mast Floodlight Tower Erection (30m)",
     sector: "lighting",
     sectorLabel: "High-Mast & Lighting",
     location: "Dindigul Town Junction / NH-44",
     client: "Municipal Corp & Highway Authority",
-    capacity: "16 Ton (ACE 16XW)",
+    capacity: "16 Ton (ACE 16XW Heavy Hydraulic)",
     date: "Sep 2026",
     status: "Completed - 100% Safety Clearance",
-    description: "Full erection and alignment of 30-meter heavy polygonal high-mast lighting pole with circular lantern ring assembly using ACE 16XW heavy hydraulic crane.",
+    description: "Full erection and vertical alignment of 30-meter heavy polygonal high-mast lighting pole with circular lantern ring assembly using ACE 16XW heavy hydraulic crane.",
     image: "assets/images/project-high-mast-erection.jpg"
   },
   {
@@ -182,16 +208,16 @@ const SNC_COMPLETED_WORKS = [
   },
   {
     id: "SNC-W1538",
-    title: "Multi-Axle Overturned Container Trailer Rescue",
-    sector: "rescue",
-    sectorLabel: "Highway Breakdown Rescue",
-    location: "Natham Byepass, NH-383 Junction",
-    client: "South India Logistics & Police Dispatch",
-    capacity: "50 Ton Heavy Hydraulic Crane + Recovery Unit",
+    title: "Precision Rooftop Construction Equipment Placement",
+    sector: "infrastructure",
+    sectorLabel: "Commercial Infrastructure",
+    location: "Natham Byepass Commercial Enclave",
+    client: "Civil Contracting & Engineering Ltd",
+    capacity: "16 Ton ACE Pick & Carry Crane",
     date: "Sep 2026",
-    status: "Emergency Completed - 45 Min Clearance",
-    description: "Midnight emergency highway recovery of 32-ton overturned freight container truck blocking arterial highway lane, cleared safely without cargo damage.",
-    image: "assets/images/project-dual-crane-tandem-lift.jpg"
+    status: "Completed - Smooth Lift Execution",
+    description: "High-boom vertical material elevation delivering multi-ton construction payload to elevated commercial terrace with certified ground riggers.",
+    image: "assets/images/project-rooftop-heavy-lift.jpg"
   },
   {
     id: "SNC-W1537",
@@ -208,16 +234,16 @@ const SNC_COMPLETED_WORKS = [
   },
   {
     id: "SNC-W1536",
-    title: "Cement Plant Rotary Kiln Shell Section Replacement",
+    title: "Commercial Site Heavy Pick & Carry Operation",
     sector: "industrial",
-    sectorLabel: "Factory Machinery",
-    location: "Vedasandur Cement Manufacturing Facility",
-    client: "Heavy Cement Corporation",
-    capacity: "150 Ton Heavy Telescopic Crane",
+    sectorLabel: "Industrial Lifting",
+    location: "Dindigul Ring Road Project Zone",
+    client: "High-Rise Development Partners",
+    capacity: "ACE 16XW Heavy Hydraulic (TN-57-BL-9267)",
     date: "May 2026",
-    status: "Completed - Scheduled Plant Overhaul",
-    description: "Precision extraction of damaged 42-ton cylindrical kiln section and rigging of replacement segment inside narrow industrial shed.",
-    image: "assets/images/project-dual-crane-tandem-lift.jpg"
+    status: "Completed - On-Schedule",
+    description: "Rapid on-site mobilization and heavy component elevation using ACE 16XW mobile crane with precision hydraulic joystick controls.",
+    image: "assets/images/project-ace-crane-construction-lift.jpg"
   },
   {
     id: "SNC-W1535",
@@ -236,14 +262,14 @@ const SNC_COMPLETED_WORKS = [
     id: "SNC-W1534",
     title: "Steel Pre-Engineered Building (PEB) Truss Erection",
     sector: "infrastructure",
-    sectorLabel: "Infrastructure & Roads",
+    sectorLabel: "PEB Truss & Structural",
     location: "Dindigul Industrial Estate",
     client: "Logistics Hub Warehouse Developers",
-    capacity: "20 Ton Hydraulic Mobile Crane",
+    capacity: "Dual ACE Mobile Cranes (Tandem)",
     date: "Mar 2026",
     status: "Completed - 40,000 sq.ft covered",
-    description: "Continuous 5-day lifting and rigging of 36-meter span steel roof trusses and cold-formed rafters for cold storage facility.",
-    image: "assets/images/project-telecom-tower-lift.jpg"
+    description: "Continuous lifting and rigging of 36-meter span steel roof trusses and cold-formed rafters for cold storage facility.",
+    image: "assets/images/project-peb-truss-tandem-lift.jpg"
   },
   {
     id: "SNC-W1533",
@@ -273,16 +299,16 @@ const SNC_COMPLETED_WORKS = [
   },
   {
     id: "SNC-W1531",
-    title: "Highway Construction Heavy Paver & Roller Extraction",
+    title: "Multi-Axle Overturned Container Trailer Rescue",
     sector: "rescue",
     sectorLabel: "Highway Breakdown Rescue",
-    location: "Karur-Dindigul Expressway Construction Site",
-    client: "Road Infrastructure JV",
-    capacity: "40 Ton Recovery & Mobile Crane",
+    location: "Natham Byepass, NH-383 Junction",
+    client: "South India Logistics & Police Dispatch",
+    capacity: "50 Ton Heavy Hydraulic Crane + Recovery Unit",
     date: "Dec 2025",
-    status: "Completed - Emergency Rigging",
-    description: "Extraction of 22-ton asphalt sensor paver bogged down in roadside marsh bed following flash monsoons.",
-    image: "assets/images/project-dual-crane-tandem-lift.jpg"
+    status: "Emergency Completed - 45 Min Clearance",
+    description: "Midnight emergency highway recovery of 32-ton overturned freight container truck blocking arterial highway lane, cleared safely without cargo damage.",
+    image: "assets/images/project-building-material-lift.jpg"
   }
 ];
 
