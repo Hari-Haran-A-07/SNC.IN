@@ -43,6 +43,7 @@ class SncCraneSimulation {
       loadWeightTons: 45.0,
       isLoadAttached: true,
       loadElevation: 0,    // 0 = resting on ground, >0 in air
+      previousElevation: 0,
       
       // Camera / Video Viewport Transform
       cameraZoom: 1.0,
@@ -412,14 +413,14 @@ class SncCraneSimulation {
     this.state.cableLength += (this.state.targetCableLength - this.state.cableLength) * Math.min(lerpRate * 1.5, 1);
     this.state.trackX += (this.state.targetTrackX - this.state.trackX) * Math.min(lerpRate * 0.8, 1);
 
-    // Audio triggers based on velocity
+    // Audio triggers based on velocity & chain tension
     const cableDelta = Math.abs(this.state.targetCableLength - this.state.cableLength);
     const boomDelta = Math.abs(this.state.targetBoomAngle - this.state.boomAngle);
-    if (cableDelta > 0.5 || boomDelta > 0.1) {
+    if (cableDelta > 0.4 || boomDelta > 0.08) {
       if (this.audio) {
-        this.audio.playChainClink(Math.min(cableDelta / 10, 1.0));
-        this.audio.startHydraulicWinch(Math.min(cableDelta / 8, 1.2));
-        this.audio.setEngineRPM(0.7);
+        this.audio.playChainClink(Math.min(cableDelta / 6, 1.4));
+        this.audio.startHydraulicWinch(Math.min(cableDelta / 6, 1.3));
+        this.audio.setEngineRPM(0.75);
       }
     } else {
       if (this.audio) {
@@ -515,6 +516,14 @@ class SncCraneSimulation {
     const actualLoadY = Math.min(loadTargetY, groundLimitY);
     const heightAboveGround = Math.max(0, groundLimitY - actualLoadY);
     this.state.loadElevation = heightAboveGround;
+
+    // Trigger Heavy Chain Tension Snap when lifting off ground
+    if (heightAboveGround > 2 && this.state.previousElevation === 0) {
+      if (this.audio) {
+        this.audio.playChainTensionSnap();
+      }
+    }
+    this.state.previousElevation = heightAboveGround;
 
     if (this.dom.loadAssembly) {
       this.dom.loadAssembly.setAttribute('transform', `translate(${loadX}, ${actualLoadY}) rotate(${this.state.swayAngle * 8})`);
