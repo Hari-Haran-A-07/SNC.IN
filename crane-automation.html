@@ -168,16 +168,16 @@
       <div class="bg-[#181818] border border-zinc-800 rounded-lg p-3">
         <h4 class="text-[11px] font-bold uppercase tracking-wider text-zinc-400 mb-2">Mechanical Audio Test</h4>
         <div class="grid grid-cols-2 gap-1.5 text-[11px]">
-          <button onclick="window.sncCraneAudio.playChainClink(1.2)" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
+          <button onclick="window.sncCraneAudio.resume(); window.sncCraneAudio.playChainClink(1.5)" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
             ⛓️ Chain Clink
           </button>
-          <button onclick="window.sncCraneAudio.playTensionCreak()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
-            ⚡ Strain Groan
+          <button onclick="window.sncCraneAudio.resume(); window.sncCraneAudio.playChainTensionSnap()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
+            ⚡ Tension Snap
           </button>
-          <button onclick="window.sncCraneAudio.playAirRelease()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
+          <button onclick="window.sncCraneAudio.resume(); window.sncCraneAudio.playAirRelease()" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 py-1.5 px-2 rounded font-mono">
             💨 Air Brake
           </button>
-          <button onclick="window.sncCraneAudio.playIndustrialHorn()" class="bg-zinc-800 hover:bg-zinc-700 text-cat-yellow py-1.5 px-2 rounded font-mono font-bold">
+          <button onclick="window.sncCraneAudio.resume(); window.sncCraneAudio.playIndustrialHorn()" class="bg-zinc-800 hover:bg-zinc-700 text-cat-yellow py-1.5 px-2 rounded font-mono font-bold">
             📢 Dual Horn
           </button>
         </div>
