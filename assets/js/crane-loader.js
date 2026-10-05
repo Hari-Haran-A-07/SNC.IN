@@ -26,11 +26,7 @@
       <!-- TOP BRAND & CONTROLS BAR -->
       <div class="crane-loader-header">
         <div class="crane-loader-brand">
-          <div class="crane-badge-triangle"></div>
-          <div class="crane-brand-text">
-            <h1>SRI NEYA <span>CRANE</span></h1>
-            <p>Heavy Industrial Lifting Solutions</p>
-          </div>
+          <img src="assets/images/snc-logo.svg" alt="SNC - Sri Neya Crane Services" style="height: 46px; width: auto; filter: drop-shadow(0 0 10px rgba(255,205,17,0.35));">
         </div>
 
         <div class="crane-loader-controls">

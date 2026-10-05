@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 180" width="100%" height="100%">
+  <defs>
+    <!-- Caterpillar Yellow Gradient matching SNC website design system -->
+    <linearGradient id="aceCatYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE033" />
+      <stop offset="60%" stop-color="#FFCD11" />
+      <stop offset="100%" stop-color="#E5B700" />
+    </linearGradient>
+
+    <!-- Subtle Depth Shadow for Industrial Heavy Machine Feel -->
+    <filter id="aceDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- Optional Background (Can be transparent or black) -->
+  <rect width="100%" height="100%" fill="transparent" />
+
+  <!-- MAIN 'SNC' INDUSTRIAL GEOMETRIC STENCIL LOGO GROUP -->
+  <g id="sncLogoGroup" fill="url(#aceCatYellow)" filter="url(#aceDropShadow)">
+
+    <!-- ==========================================
+         LETTER 'S' (Heavy Industrial Stencil)
+         Envelope: X: 20 to 140, Y: 18 to 135
+         ========================================== -->
+    <g id="letterS">
+      <!-- Outer Solid S-Block -->
+      <path d="
+        M 22 18 
+        L 138 18 
+        L 138 56 
+        L 66 56 
+        L 66 65 
+        L 138 78 
+        L 138 135 
+        L 22 135 
+        L 22 97 
+        L 94 97 
+        L 94 88 
+        L 22 75 
+        Z
+      " />
+      <!-- Signature ACE 45-degree Triangular Stencil Notches -->
+      <polygon points="138,56 100,56 138,18" fill="#000000" opacity="0.0" />
+      <polygon points="22,97 60,97 22,135" fill="#000000" opacity="0.0" />
+    </g>
+
+    <!-- ==========================================
+         LETTER 'N' (ACE Style Dual Pillar & Triangle Cutouts)
+         Envelope: X: 155 to 275, Y: 18 to 135
+         ========================================== -->
+    <g id="letterN">
+      <!-- Full N Block with Stencil Geometry -->
+      <path d="
+        M 155 18 
+        L 194 18 
+        L 194 62 
+        L 236 18 
+        L 275 18 
+        L 275 135 
+        L 236 135 
+        L 236 91 
+        L 194 135 
+        L 155 135 
+        Z
+      " />
+      <!-- Sharp triangular internal cutouts matching ACE logo anatomy -->
+      <polygon points="194,18 236,18 236,70" fill="url(#aceCatYellow)" opacity="0.0" />
+    </g>
+
+    <!-- ==========================================
+         LETTER 'C' (Authentic ACE Semi-Circle & Triangular Wedge)
+         Envelope: X: 290 to 418, Y: 18 to 135
+         ========================================== -->
+    <g id="letterC">
+      <!-- Solid Left Pillar and Outer Arc -->
+      <path d="
+        M 290 18 
+        L 355 18 
+        A 58.5 58.5 0 0 1 418 76.5 
+        A 58.5 58.5 0 0 1 355 135 
+        L 290 135 
+        Z
+      " />
+      
+      <!-- Negative Space Cutout: Creates the inner cavity & jaws of the 'C' -->
+      <path d="
+        M 334 54 
+        A 22.5 22.5 0 0 1 372 76.5 
+        A 22.5 22.5 0 0 1 334 99 
+        L 334 54 
+        Z
+      " fill="#000000" />
+
+      <!-- ACE Signature Triangular Jaw Cutout Opening -->
+      <polygon points="360,76.5 422,38 422,115" fill="#000000" />
+      
+      <!-- ACE Center Triangle Tongue Piece -->
+      <polygon points="368,76.5 418,52 418,101" fill="url(#aceCatYellow)" />
+    </g>
+
+  </g>
+
+  <!-- ==========================================
+       SUBTEXT: 'Sri Neya Crane Services'
+       (Exact reproduction of 'Action Construction Equipment Ltd.' layout)
+       ========================================== -->
+  <text x="220" y="166" 
+        text-anchor="middle" 
+        font-family="'Barlow', 'Montserrat', 'Inter', 'Arial Black', sans-serif" 
+        font-size="16" 
+        font-weight="900" 
+        letter-spacing="1.1" 
+        fill="#FFFFFF">
+    Sri Neya Crane Services
+  </text>
+</svg>

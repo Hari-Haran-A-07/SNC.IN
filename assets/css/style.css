@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   );
 }
 
-/* Caterpillar-style Triangular Emblem Logo */
+/* ACE-style Stencil SNC Logo System */
 .snc-emblem-logo {
   display: inline-flex;
   align-items: center;
@@ -111,57 +111,23 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.snc-triangle-badge {
-  position: relative;
-  width: 46px;
-  height: 40px;
-  background: var(--cat-yellow);
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 2px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease;
+.snc-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
 }
 
-.snc-triangle-badge::after {
-  content: "SNC";
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 15px;
-  color: var(--cat-black);
-  letter-spacing: -0.5px;
-  position: absolute;
-  bottom: 3px;
+.snc-logo-img-lg {
+  height: 64px;
+  width: auto;
 }
 
-.snc-emblem-logo:hover .snc-triangle-badge {
+.snc-emblem-logo:hover .snc-logo-img {
   transform: scale(1.05);
-}
-
-.snc-brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.snc-brand-title {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  color: var(--cat-white);
-  line-height: 1;
-}
-
-.snc-brand-subtitle {
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--cat-yellow);
-  text-transform: uppercase;
-  margin-top: 3px;
+  filter: drop-shadow(0 0 14px rgba(255, 205, 17, 0.45));
 }
 
 /* Industrial Buttons */
