@@ -1,0 +1,22 @@
+# robots.txt for SRI NEYA CRANE SERVICES (SNC)
+# https://hari-haran-a-07.github.io/SNC.IN/
+
+User-agent: *
+Allow: /
+
+# Priority indexing paths
+Allow: /index.html
+Allow: /about.html
+Allow: /fleet.html
+Allow: /projects.html
+Allow: /tracking.html
+Allow: /emergency.html
+Allow: /contact.html
+Allow: /crane-automation.html
+Allow: /assets/
+
+# Crawl-delay for polite scraping
+Crawl-delay: 1
+
+# XML Sitemap reference
+Sitemap: https://hari-haran-a-07.github.io/SNC.IN/sitemap.xml
