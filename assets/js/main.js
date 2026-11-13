@@ -863,6 +863,19 @@ function initBookingModal() {
       const craneType = document.getElementById('bookCraneType')?.value || 'Standard Mobile Crane';
       const notes = document.getElementById('bookNotes')?.value || 'Immediate Requirement';
 
+      // Validate Indian phone number format
+      const cleanPhone = phone.replace(/[\s\-\(\)\+]/g, '');
+      if (cleanPhone.length < 10) {
+        showToast("Please enter a valid 10-digit phone number.");
+        const phoneInput = document.getElementById('bookPhone');
+        if (phoneInput) {
+          phoneInput.focus();
+          phoneInput.classList.add('border-red-500');
+          setTimeout(() => phoneInput.classList.remove('border-red-500'), 3000);
+        }
+        return;
+      }
+
       const whatsappUrl = `https://wa.me/917373399937?text=CRANE%20BOOKING%20REQUEST:%0AName:%20${encodeURIComponent(name)}%0APhone:%20${encodeURIComponent(phone)}%0ALocation:%20${encodeURIComponent(location)}%0ARequested%20Equipment:%20${encodeURIComponent(craneType)}%0ANotes:%20${encodeURIComponent(notes)}`;
 
       showToast("Dispatch request submitted! Redirecting to 24/7 Operations Desk...");
