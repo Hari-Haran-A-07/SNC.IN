@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBookingModal();
   initCounters();
   initServiceWorker();
+  initCopyrightYear();
 });
 
 /* ============================================================
@@ -963,4 +964,13 @@ function initServiceWorker() {
         });
     });
   }
+}
+
+/* ============================================================
+   10. AUTO-UPDATE COPYRIGHT YEAR
+   ============================================================ */
+function initCopyrightYear() {
+  const yearSpans = document.querySelectorAll('.snc-current-year');
+  const year = new Date().getFullYear();
+  yearSpans.forEach(el => { el.textContent = year; });
 }
