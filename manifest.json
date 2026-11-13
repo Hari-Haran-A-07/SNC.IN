@@ -1,0 +1,19 @@
+{
+  "name": "SRI NEYA CRANE SERVICES (SNC)",
+  "short_name": "SNC Cranes",
+  "description": "24/7 Heavy Crane Rental, Industrial Rigging, and Highway Emergency Recovery Services in Tamil Nadu",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#121212",
+  "theme_color": "#FFCD11",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
