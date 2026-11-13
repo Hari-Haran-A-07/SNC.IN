@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLoadCalculator();
   initBookingModal();
   initCounters();
+  initServiceWorker();
 });
 
 /* ============================================================
@@ -932,4 +933,21 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 4500);
+}
+
+/* ============================================================
+   9. SERVICE WORKER REGISTRATION (PWA)
+   ============================================================ */
+function initServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then((reg) => {
+          console.log('SNC PWA: Service Worker registered successfully with scope:', reg.scope);
+        })
+        .catch((err) => {
+          console.warn('SNC PWA: Service Worker registration failed:', err);
+        });
+    });
+  }
 }
