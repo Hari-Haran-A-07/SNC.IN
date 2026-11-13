@@ -802,9 +802,38 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(0);
 }
 
-/* Print Styles */
+/* Enhanced Industrial Print Stylesheet */
 @media print {
-  .cat-navbar, .cat-top-bar, footer, .btn-cat-primary, .btn-cat-emergency {
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .cat-navbar, .cat-top-bar, footer, .btn-cat-primary, .btn-cat-emergency,
+  .snc-modal-backdrop, .snc-toast, #mobileDrawer, .close-modal-trigger {
     display: none !important;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #000000 !important;
+  }
+
+  table, figure, .cat-card, .fleet-card {
+    page-break-inside: avoid;
+    border: 1px solid #cccccc !important;
+  }
+
+  a[href^="tel:"]::after {
+    content: " (" attr(href) ")";
   }
 }
